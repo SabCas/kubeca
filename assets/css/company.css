@@ -1,0 +1,46 @@
+/* The Company cover uses the selected sharp frontal image at its natural framing. */
+.company-page .company-chapter .film-image {
+  object-position: center center;
+  filter: none;
+  transform: none !important;
+}
+
+/* Team backgrounds open on request while photos, names and roles stay visible. */
+.company-page .team-grid { align-items: start; }
+.team-profile > summary {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+.team-profile > summary::-webkit-details-marker { display: none; }
+.team-profile > summary::marker { content: ""; }
+.team-profile > summary img { transition: border-color .2s; }
+.team-profile > summary:hover img { border-color: #79e5ed; }
+.team-profile-identity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 0 20px;
+  border-bottom: 1px solid #29d8e755;
+}
+.team-member .team-profile-identity .team-role { margin: 0 0 10px; }
+.team-member .team-profile-identity h3 { margin: 0; }
+.team-profile-toggle {
+  display: grid;
+  place-items: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #29d8e766;
+  color: #79e5ed;
+  font-size: 24px;
+  line-height: 1;
+}
+.team-profile-toggle > span { transition: transform .2s; }
+.team-profile[open] .team-profile-toggle > span { transform: rotate(45deg); }
+.team-profile > summary:hover .team-profile-toggle { border-color: #79e5ed; }
+.team-profile-bio { padding-top: 20px; }
+@media (prefers-reduced-motion: reduce) {
+  .team-profile > summary img, .team-profile-toggle > span { transition: none; }
+}

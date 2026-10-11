@@ -1,0 +1,133 @@
+/* Show the complete aircraft at page width, with the heading in its dark negative space. */
+.cinematic-tech main > #fixed-wing.section {
+  display: block;
+  padding: 0 0 120px;
+  min-height: 0;
+  background: #080d11;
+}
+.airframe-feature {
+  position: relative;
+  background: #080d11;
+}
+.airframe-heading {
+  position: absolute;
+  top: clamp(40px, 4vw, 76px);
+  left: var(--gutter);
+  right: var(--gutter);
+  z-index: 1;
+}
+.airframe-heading .eyebrow {
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+.cinematic-tech #airframe-title {
+  font-size: clamp(40px, 4.8vw, 78px);
+}
+.cinematic-tech [data-media-slot="fixed-wing-platform"] {
+  position: relative;
+  padding-top: clamp(80px, 8vw, 140px);
+}
+.cinematic-tech [data-media-slot="fixed-wing-platform"] > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  object-fit: contain;
+  background: #101113;
+  border: 0;
+}
+.cinematic-tech [data-media-slot="fixed-wing-platform"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, #080d11, transparent 30%, transparent 75%, #080d11);
+}
+.cinematic-tech [data-media-slot="fixed-wing-platform"] > figcaption {
+  position: absolute;
+  bottom: 24px;
+  left: var(--gutter);
+  right: var(--gutter);
+  z-index: 1;
+  margin: 0;
+}
+.airframe-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding: 24px var(--gutter) 72px;
+}
+.cinematic-tech #fixed-wing .airframe-details > .lead {
+  max-width: 34ch;
+  margin: 0;
+  color: #eef1ed;
+}
+.airframe-configurations .eyebrow {
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+.airframe-configurations ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 30px;
+  margin: 0;
+  padding: 20px 0 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+.cinematic-tech #fixed-wing > .fixed-wing-replay {
+  margin-inline: var(--gutter);
+}
+@media (min-width: 1600px) {
+  .airframe-heading,
+  .cinematic-tech [data-media-slot="fixed-wing-platform"] > figcaption {
+    left: max(var(--gutter), calc((100vw - 1450px) / 2));
+    right: max(var(--gutter), calc((100vw - 1450px) / 2));
+  }
+  .airframe-details {
+    padding-inline: max(var(--gutter), calc((100vw - 1450px) / 2));
+  }
+  .cinematic-tech #fixed-wing > .fixed-wing-replay {
+    margin-inline: max(var(--gutter), calc((100vw - 1450px) / 2));
+  }
+}
+@media (max-width: 900px) {
+  .cinematic-tech main > #fixed-wing.section {
+    padding-block: 0 80px;
+  }
+  .airframe-details {
+    gap: 35px;
+    padding-bottom: 56px;
+  }
+}
+@media (max-width: 760px) {
+  .airframe-heading {
+    position: relative;
+    inset: auto;
+    padding: 48px var(--gutter) 18px;
+  }
+  .cinematic-tech #airframe-title {
+    font-size: clamp(36px, 6.5vw, 49px);
+  }
+  .cinematic-tech [data-media-slot="fixed-wing-platform"] {
+    padding-top: 0;
+  }
+  .cinematic-tech [data-media-slot="fixed-wing-platform"] > figcaption {
+    position: relative;
+    inset: auto;
+    padding: 14px var(--gutter) 0;
+    font-size: 10px;
+  }
+  .airframe-details {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .cinematic-tech main > #fixed-wing.section {
+    padding-bottom: 65px;
+  }
+}

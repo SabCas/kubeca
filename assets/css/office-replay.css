@@ -1,0 +1,31 @@
+/* All quadcopter scenes share one caption position, including the intro. */
+.cinematic-tech .office-overview{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end}
+.cinematic-tech .office-overview .lead{margin-top:0}
+.cinematic-tech .office-overview p:not(.eyebrow){max-width:42ch}
+.office-replay{padding-top:0;border-top:0}
+.office-replay .replay-stage{container-type:inline-size}
+.office-replay .replay-caption{position:absolute;left:3%;top:8%;bottom:auto;width:min(65%,920px);min-height:0;padding:clamp(18px,1.7cqw,28px);border-left:2px solid #62dbe6;border-top:0}
+.office-replay .replay-caption h3{font-size:clamp(30px,3.5cqw,64px);line-height:1.08;margin:0 0 12px}
+.cinematic-tech .office-replay .replay-caption p{font-size:clamp(18px,1.75cqw,30px);line-height:1.4;margin:0}
+.office-replay .replay-step{font-size:clamp(13px,1.1cqw,18px)}
+.office-prototype-label{position:absolute;top:2%;right:2%;left:auto;padding:8px 12px;border:1px solid #355d63;border-left:2px solid #62dbe6;border-radius:3px;background:#071316eb;color:#d1e9ec;font-size:clamp(10px,.9vw,14px);line-height:1.4;pointer-events:none;max-width:44%}
+.office-intro-background{position:absolute;left:var(--office-picture-left,0px);top:var(--office-picture-top,0px);width:var(--office-picture-width,100%);height:var(--office-picture-height,100%);overflow:hidden;pointer-events:none;background:#061015;opacity:0;visibility:hidden;transition:opacity .65s ease,visibility 0s .65s}
+.cinematic-tech .office-replay .office-intro-background img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.75) saturate(.8)}
+.office-intro-background::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,#030a10e8 0%,#030a10b0 36%,#030a1038 76%,#030a1066),linear-gradient(180deg,#030a101a 35%,#030a1080)}
+.office-replay.has-intro .office-intro-background{opacity:1;visibility:visible;transition:opacity .65s ease,visibility 0s}
+.office-replay.has-intro .replay-stage,.office-replay.has-intro .replay-stage video{background:#000}
+.office-replay.has-intro .office-prototype-label{visibility:hidden}
+.office-replay.has-intro .replay-caption{background:none;backdrop-filter:none}
+@media(max-width:900px){
+ .cinematic-tech .office-overview{grid-template-columns:1fr;gap:28px}
+ .office-replay .replay-caption{width:90%;padding:10px;backdrop-filter:none}
+ .office-replay .replay-caption h3{font-size:clamp(22px,3.5cqw,32px);margin-bottom:8px}
+ .cinematic-tech .office-replay .replay-caption p{font-size:clamp(12px,1.75cqw,18px)}
+ .office-replay .replay-step{font-size:clamp(9px,1.1cqw,13px);letter-spacing:.08em;margin-bottom:8px}
+ .office-prototype-label{display:none}
+}
+.office-replay .replay-stage:fullscreen .replay-caption{left:calc(var(--office-picture-left,0px) + var(--office-picture-width,100vw)*.03);top:calc(var(--office-picture-top,0px) + var(--office-picture-height,100vh)*.08);bottom:auto;width:min(calc(var(--office-picture-width,100vw)*.65),920px)}
+@media(max-width:900px){
+ .office-replay .replay-stage:fullscreen .replay-caption{width:calc(var(--office-picture-width,100vw)*.90)}
+}
+@media(prefers-reduced-motion:reduce){.office-intro-background{transition:none!important}}
