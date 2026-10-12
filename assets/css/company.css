@@ -44,3 +44,6 @@
 @media (prefers-reduced-motion: reduce) {
   .team-profile > summary img, .team-profile-toggle > span { transition: none; }
 }
+
+/* Center the subjects within the landscape source photos, on desktop and mobile. */
+.team-member img.team-portrait-centered { object-position: 39% 35%; }

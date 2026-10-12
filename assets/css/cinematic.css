@@ -143,15 +143,15 @@
 .film-copy .eyebrow,.cinematic-tech .eyebrow{color:#79e5ed}
 .story-navigation a:hover,.section-nav a:hover{color:#79e5ed}
 
-/* Editorial platform overview: no diagram, cards or connector hierarchy. */
+/* System overview and capability explanations. */
 .cinematic-tech #system.system-editorial{background:#0b1116}
 .system-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:70px;align-items:end}
-.system-intro .lead{font-size:clamp(24px,3vw,40px);line-height:1.35;color:#aebbc3;letter-spacing:-.03em}
-.system-platforms{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,130px);margin-top:clamp(64px,8vw,110px)}
-.system-platforms article{border-top:1px solid #ffffff26;padding-top:24px}
-.system-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8cbcc3}
-.system-platforms h3{font-size:clamp(28px,3.3vw,46px);line-height:1.15;letter-spacing:-.035em;margin:30px 0 20px}
-.system-platforms article>p:last-child{max-width:34ch;font-size:17px;color:#b4c0c8;line-height:1.7}
+.system-intro .lead{max-width:40ch;font-size:clamp(20px,2vw,28px);line-height:1.5;color:#bcc6cb;letter-spacing:-.02em}
+.system-platforms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,64px);margin-top:56px}
+.system-platforms article{border-top:1px solid #29d8e744;padding-top:22px}
+.system-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#79e5ed}
+.system-platforms h3{font-size:clamp(26px,2.5vw,36px);line-height:1.15;letter-spacing:-.035em;margin:22px 0 18px;text-wrap:balance}
+.system-platforms article>p:last-child{max-width:40ch;font-size:17px;color:#b4c0c8;line-height:1.65}
 .mission-film{margin-top:64px}
 .mission-stage{position:relative;background:#0a1218;overflow:hidden;border-block:1px solid #ffffff20}
 .mission-kicker{display:flex;justify-content:space-between;gap:20px;padding:25px 30px 0;color:#99acb6;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
@@ -172,10 +172,10 @@
  .mission-caption h3{font-size:20px;margin-top:7px}
  .mission-toolbar{font-size:10px}
 }
-@media(max-width:600px){
+@media(max-width:900px){
  .system-intro{grid-template-columns:1fr;gap:28px}
- .system-platforms{grid-template-columns:1fr;gap:42px;margin-top:48px}
- .system-platforms h3{margin-top:22px}
+ .system-platforms{grid-template-columns:1fr;gap:34px;margin-top:40px}
+ .system-platforms article>p:last-child{max-width:56ch}
 }
 .development-goals{margin-top:60px;border-top:1px solid #ffffff26;padding-top:30px}
 .development-goals>h3{font-size:21px;margin-bottom:25px}

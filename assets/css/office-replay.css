@@ -10,8 +10,8 @@
 .office-replay .replay-step{font-size:clamp(13px,1.1cqw,18px)}
 .office-prototype-label{position:absolute;top:2%;right:2%;left:auto;padding:8px 12px;border:1px solid #355d63;border-left:2px solid #62dbe6;border-radius:3px;background:#071316eb;color:#d1e9ec;font-size:clamp(10px,.9vw,14px);line-height:1.4;pointer-events:none;max-width:44%}
 .office-intro-background{position:absolute;left:var(--office-picture-left,0px);top:var(--office-picture-top,0px);width:var(--office-picture-width,100%);height:var(--office-picture-height,100%);overflow:hidden;pointer-events:none;background:#061015;opacity:0;visibility:hidden;transition:opacity .65s ease,visibility 0s .65s}
-.cinematic-tech .office-replay .office-intro-background img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.75) saturate(.8)}
-.office-intro-background::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,#030a10e8 0%,#030a10b0 36%,#030a1038 76%,#030a1066),linear-gradient(180deg,#030a101a 35%,#030a1080)}
+.cinematic-tech .office-replay .office-intro-background img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.95) saturate(.9)}
+.office-intro-background::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,#030a1080 0%,#030a1050 36%,#030a1000 76%,#030a1033),linear-gradient(180deg,#030a1000 35%,#030a1040)}
 .office-replay.has-intro .office-intro-background{opacity:1;visibility:visible;transition:opacity .65s ease,visibility 0s}
 .office-replay.has-intro .replay-stage,.office-replay.has-intro .replay-stage video{background:#000}
 .office-replay.has-intro .office-prototype-label{visibility:hidden}

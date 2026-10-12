@@ -1,0 +1,112 @@
+/* Shared type, colour and spacing for the current public pages. */
+:is(.cinematic-home, .cinematic-tech) {
+  --site-background: #080d11;
+  --site-text: #eef1ed;
+  --site-muted: #bcc6cb;
+  --site-accent: #79e5ed;
+  --site-divider: #29d8e744;
+  --section-space: clamp(64px, 8.4vw, 120px);
+  --section-title-size: clamp(40px, 5vw, 78px);
+  --lead-size: clamp(20px, 1.6vw, 24px);
+  --content-gutter: var(--gutter);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--site-text);
+}
+@media (min-width: 1600px) {
+  :is(.cinematic-home, .cinematic-tech) {
+    --content-gutter: max(var(--gutter), calc((100vw - 1450px) / 2));
+  }
+}
+.cinematic-tech :is(#system-title, #quadcopter-title),
+.company-page #team-title,
+:is(.cinematic-home, .cinematic-tech) .contact h2 {
+  font-size: var(--section-title-size);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.045em;
+  color: var(--site-text);
+}
+:is(.cinematic-home, .cinematic-tech) .eyebrow {
+  margin: 0 0 24px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: .16em;
+  color: var(--site-accent);
+}
+.cinematic-tech :is(.system-intro, .office-overview, .tech-product-details) > .lead,
+:is(.cinematic-home, .cinematic-tech) .contact > p:not(.eyebrow) {
+  font-size: var(--lead-size);
+  line-height: 1.5;
+  letter-spacing: -.015em;
+  color: var(--site-muted);
+}
+:is(.cinematic-home, .cinematic-tech) :is(.button, .text-link, .home-detail-link) {
+  color: var(--site-accent);
+  background: transparent;
+  border-bottom-color: var(--site-divider);
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: .025em;
+}
+:is(.cinematic-home, .cinematic-tech) :is(.button, .text-link, .home-detail-link):hover {
+  color: #eefeff;
+  border-bottom-color: var(--site-accent);
+}
+:is(.cinematic-home, .cinematic-tech) .contact {
+  padding-block: var(--section-space);
+  background: var(--site-background);
+}
+/* Both demonstration headers use the same heading/description columns. */
+.cinematic-tech .office-overview,
+.fixed-wing-replay-heading {
+  column-gap: clamp(32px, 5vw, 70px);
+}
+.fixed-wing-replay-heading .eyebrow {
+  margin-bottom: 0;
+}
+
+/* Product typography follows the original cinematic navigation module. */
+.cinematic-tech :is(#airframe-title, #navigation-module-title) {
+  font-size: clamp(36px, 3.5vw, 58px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.04em;
+  color: var(--site-text);
+}
+.cinematic-tech :is(#airframe-title, #navigation-module-title) span {
+  color: var(--site-accent);
+}
+.cinematic-tech #fixed-wing .airframe-details > .lead,
+.cinematic-tech #navigation-module .navigation-module-description {
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.7;
+  letter-spacing: normal;
+  color: #bfcbd1;
+}
+.cinematic-tech .airframe-configurations .eyebrow {
+  margin-bottom: 20px;
+}
+.cinematic-tech :is(.airframe-configurations ul, .navigation-module-capabilities) {
+  gap: 12px 24px;
+  padding: 22px 0 0;
+  border-top-color: #29d8e733;
+  color: #d4e0e5;
+  font-size: 13px;
+  line-height: 1.7;
+  letter-spacing: normal;
+}
+@media (max-width: 900px) {
+  .cinematic-tech :is(#airframe-title, #navigation-module-title) {
+    font-size: clamp(36px, 6vw, 52px);
+  }
+}
+@media (max-width: 600px) {
+  .cinematic-tech :is(#airframe-title, #navigation-module-title) {
+    font-size: clamp(32px, 8.6vw, 44px);
+  }
+  .cinematic-tech :is(.airframe-configurations ul, .navigation-module-capabilities) {
+    gap: 12px 20px;
+    font-size: 12px;
+  }
+}

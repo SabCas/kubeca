@@ -1,0 +1,33 @@
+WEBVTT
+
+00:00.000 --> 00:03.000
+Visual navigation.
+Automatic matching. Optional review.
+
+00:00:03.000 --> 00:00:08.000
+Navigation runs automatically.
+Navigation and satellite matching run automatically.
+
+00:00:08.000 --> 00:00:13.000
+See what the aircraft sees.
+Onboard imagery supports automatic satellite matching.
+
+00:00:13.000 --> 00:00:18.800
+Optional review: inspect a match if needed.
+The pointer opens a comparison on the right. Matching runs automatically.
+
+00:00:18.800 --> 00:00:24.600
+Optional comparison: review camera and satellite.
+Recorded imagery and diagnostic links support optional visual inspection.
+
+00:00:24.600 --> 00:00:29.500
+Blend images for optional review.
+The pointer selects Overlay and adjusts camera opacity.
+
+00:00:29.500 --> 00:00:33.700
+Inspect the original frame if needed.
+An optional view of the captured camera image and satellite crop.
+
+00:00:33.700 --> 00:00:38.000
+Automatic matching continues.
+The comparison closes. Normal operation needs no comparison window.

@@ -1,0 +1,16 @@
+/* Fixed-wing caption styling, retained in the upper left across this walkthrough. */
+.cinematic-tech .office-replay.team-film .replay-caption{left:3%;top:8%;bottom:auto;width:min(65%,920px);min-height:0;padding:clamp(6px,1.7cqw,28px);border-left:2px solid #62dbe6;border-top:0;background:none;backdrop-filter:none;box-shadow:none;pointer-events:none}
+.cinematic-tech .office-replay.team-film .replay-step{font-family:Arial,Helvetica,sans-serif;font-size:clamp(6px,1.1cqw,18px);font-weight:400;letter-spacing:.12em;line-height:1.2;margin:0 0 .677cqw;color:#8ee8ed}
+.cinematic-tech .office-replay.team-film .replay-caption h3{font-family:Arial,Helvetica,sans-serif;font-size:clamp(13px,3.5cqw,64px);line-height:1.08;font-weight:400;letter-spacing:-.035em;margin:0 0 .625cqw;color:#edf5f5;text-wrap:balance}
+.cinematic-tech .office-replay.team-film .replay-caption p{font-family:Arial,Helvetica,sans-serif;font-size:clamp(7.5px,1.75cqw,30px);line-height:1.4;margin:0;color:#d0e0e5;max-width:62ch}
+.office-replay.team-film .replay-start-affordance{bottom:8%;right:4%;font-size:clamp(12px,1.25cqw,24px)}
+.office-replay.team-film .replay-stage:fullscreen .replay-caption{left:calc(var(--office-picture-left,0px) + var(--office-picture-width,100vw)*.03);top:calc(var(--office-picture-top,0px) + var(--office-picture-height,100vh)*.08);width:min(calc(var(--office-picture-width,100vw)*.65),920px)}
+@media(max-width:600px){
+ .cinematic-tech .office-replay.team-film .replay-caption{width:90%;border-left-width:1px}
+ .cinematic-tech .office-replay.team-film .replay-step{font-size:max(6px,1.1cqw)}
+ .office-replay.team-film .replay-stage:fullscreen .replay-caption{width:calc(var(--office-picture-width,100vw)*.9)}
+}
+
+.cinematic-tech .office-replay.team-film .replay-step{display:none}
+.cinematic-tech .office-replay.team-film .replay-caption{top:8%}
+.office-replay.team-film .replay-stage:fullscreen .replay-caption{top:calc(var(--office-picture-top,0px) + var(--office-picture-height,100vh)*.08)}

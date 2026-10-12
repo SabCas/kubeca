@@ -1,0 +1,79 @@
+{
+  "duration": 45.5,
+  "revision": 4,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 3.6,
+      "label": "KUBECA / Quadcopter demonstration",
+      "title": "One mission. One team.",
+      "copy": "Flexible tasks. Shared situational awareness.",
+      "layout": "film"
+    },
+    {
+      "start": 3.6,
+      "end": 9,
+      "label": "01 / Define",
+      "title": "Command the mission.",
+      "copy": "By text or speech. In your own words.",
+      "layout": "film"
+    },
+    {
+      "start": 9,
+      "end": 13.5,
+      "label": "02 / Authorize",
+      "title": "Review. Approve. Start.",
+      "copy": "Review each assignment. Approve, then start.",
+      "layout": "film"
+    },
+    {
+      "start": 13.5,
+      "end": 20.5,
+      "label": "03 / Explore",
+      "title": "Explore together.",
+      "copy": "Independent navigation. One shared map.",
+      "layout": "film"
+    },
+    {
+      "start": 20.5,
+      "end": 26.5,
+      "label": "04 / Change perspective",
+      "title": "Drone 1. Drone 2.",
+      "copy": "Switch the camera view and mission details.",
+      "layout": "film"
+    },
+    {
+      "start": 26.5,
+      "end": 29.5,
+      "label": "05 / Coordinate",
+      "title": "Different roles. One team.",
+      "copy": "Here, one follows. The other keeps exploring.",
+      "layout": "film"
+    },
+    {
+      "start": 29.5,
+      "end": 32.5,
+      "label": "05 / Operator control",
+      "title": "Keep control of the mission.",
+      "copy": "Return home \u00b7 Hover \u00b7 FPV mode",
+      "layout": "film"
+    },
+    {
+      "start": 32.5,
+      "end": 39.5,
+      "label": "06 / Optional review",
+      "title": "Inspect an observation.",
+      "copy": "Open captured imagery for optional review.",
+      "layout": "film"
+    },
+    {
+      "start": 39.5,
+      "end": 45.5,
+      "label": "KUBECA / Mission-defined behaviour",
+      "title": "Your objective. Your team.",
+      "copy": "One example. Configure tasks for your mission.",
+      "layout": "film"
+    }
+  ],
+  "presentation": "Original C2 interface animated from captured states. Website explanations are separate HTML overlays. Tasks and roles are mission-defined. Camera views are captured observations, not a live feed."
+}

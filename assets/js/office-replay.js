@@ -14,7 +14,6 @@
   let requestedScene = '';
   let frame = 0;
   let animation;
-  let started = false;
   const decodedFrames = typeof video.requestVideoFrameCallback === 'function';
 
   function showScene(scene, index, layout) {
@@ -84,28 +83,35 @@
     stage.style.setProperty('--office-picture-left', `${(bounds.width - width) / 2}px`);
     stage.style.setProperty('--office-picture-top', `${(bounds.height - height) / 2}px`);
   }
-  function update() { toggle.textContent = video.paused ? 'Play demo' : 'Pause demo'; }
-  function play() { started = true; video.play().catch(update); }
+  function update() {
+    const cover = video.paused && video.currentTime < (film.classList.contains('team-film') ? .1 : 3);
+    film.classList.toggle('has-cover', cover);
+    toggle.hidden = !cover;
+    video.controls = !cover;
+    fullscreen.hidden = !document.fullscreenEnabled || (cover && document.fullscreenElement !== stage);
+    fullscreen.setAttribute('aria-label', document.fullscreenElement === stage ? 'Exit full screen' : 'Full screen');
+  }
+  function play() { video.play().catch(update); }
 
-  toggle.hidden = false;
-  toggle.addEventListener('click', () => video.paused ? play() : video.pause());
-  fullscreen.hidden = !document.fullscreenEnabled;
+  toggle.addEventListener('click', play);
   fullscreen.addEventListener('click', () => {
     const request = document.fullscreenElement ? document.exitFullscreen() : stage.requestFullscreen();
     request.catch(() => {});
   });
   document.addEventListener('fullscreenchange', () => {
-    fullscreen.textContent = document.fullscreenElement === stage ? 'Exit full screen' : 'Full screen';
+    update();
     sizePicture();
   });
   window.addEventListener('resize', sizePicture);
   video.addEventListener('loadedmetadata', sizePicture);
-  video.addEventListener('play', () => { started = true; update(); scheduleFrame(); });
+  video.addEventListener('play', () => { update(); scheduleFrame(); });
   video.addEventListener('pause', () => { update(); cancelFrame(); render(); });
   ['timeupdate', 'seeked', 'loadedmetadata', 'loadeddata', 'canplay'].forEach(event => video.addEventListener(event, () => {
+    update();
     if (video.paused || !decodedFrames) render();
   }));
   video.addEventListener('error', () => { toggle.hidden = true; film.querySelector('[data-replay-error]').hidden = false; });
+  video.addEventListener('ended', update);
   motion.addEventListener('change', () => { if (motion.matches) {video.pause(); animation?.cancel();} });
   document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); });
   fetch(film.dataset.scenes, {cache: 'no-cache'}).then(response => {
@@ -113,8 +119,9 @@
     return response.json();
   }).then(data => { scenes = data.scenes; render(); }).catch(() => {});
 
+  update();
+
   if ('IntersectionObserver' in window) new IntersectionObserver(([entry]) => {
     if (!entry.isIntersecting) video.pause();
-    else if (!started && !motion.matches && !navigator.connection?.saveData && !document.hidden) play();
   }, {threshold: .35}).observe(video);
 })();
