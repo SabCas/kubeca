@@ -1,0 +1,50 @@
+{
+  "capture": "Current KUBECA C2 UI; cropped map, simultaneous onboard preview and match dialog",
+  "capture_resolution": [
+    1920,
+    1080
+  ],
+  "website_duration_s": 17.96,
+  "playback_speed": 1,
+  "matching_mode": "gpu",
+  "matching_device": "cuda",
+  "source_matching_frames": 145,
+  "recorded_vio": true,
+  "gps_aided_terrain_height": true,
+  "gps_denied_benchmark": false,
+  "comparison_links": "Reconstructed DIS diagnostic links, not learned matcher inliers",
+  "intro": "Previously approved illustrative aircraft opening",
+  "later_flight_clips": {
+    "overview_raw_s": 230.22151815799953,
+    "comparison_raw_s": 254.35654138300015,
+    "final_route_raw_s": 278.4896366790017
+  },
+  "map_attribution": "LGL-BW (2026), Datenlizenz Deutschland \u2013 Namensnennung \u2013 Version 2.0",
+  "map_license": "https://www.govdata.de/dl-de/by-2-0",
+  "ui_sha256": {
+    "src/c2_web/web/app.js": "60ebf0850b8ed4d9908a30a3c1404f2456120c7cb85aa6ce0545372459355547",
+    "src/c2_web/web/index.html": "23fc94d7bf70f6f2dfe791a3ced670041544eaee6c32a1034c4d72028da550e2",
+    "src/c2_web/web/styles.css": "d2b39adb278313160e7944c9c9f6948b62301fa91a6c65b1ab55facc8a647288"
+  },
+  "raw_sha256": "5b385af707d4eae0bd17279df70ce07aae9d5084e8bfa8b6c2dcd38b3b1cbe10",
+  "outputs": [
+    {
+      "file": "fixed-wing-c2-gpu-current-ui-v2-1080p.mp4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "f7f973512a9a17e607fa9db7d9c505f867d99cfb685406b801813c2ebf9fe6fe"
+    },
+    {
+      "file": "fixed-wing-c2-gpu-current-ui-v2-4k.mp4",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256": "5b233941cc7718beeab1af3f234a8d61a3c95f753b2af9dd9d1408e4219a5f02"
+    }
+  ],
+  "4k_encoding": "Upscaled from the native 1080p website edit",
+  "presentation": "18-second teaser; later trajectory with simultaneous camera preview, brief image pair; review controls omitted"
+}

@@ -14,18 +14,12 @@
   const copy = film.querySelector('[data-replay-copy]');
   const step = film.querySelector('[data-replay-step]');
   const progress = film.querySelector('[data-replay-progress]');
-  const introDuration = 3;
+  const introDuration = 2;
   const scenes = [
-    [0, 'KUBECA / Fixed-wing demonstration', 'Visual navigation.', 'Automatic matching. Optional review.'],
-    ...[
-    [0, '01 / Automatic navigation', 'Navigation runs automatically.', 'Navigation and satellite matching run automatically.'],
-    [5, '02 / Onboard imagery', 'See what the aircraft sees.', 'Onboard imagery supports automatic satellite matching.'],
-    [10, '03 / Optional review', 'Inspect a match if needed.', 'Opening the comparison is optional. Matching runs automatically.'],
-    [15.8, '04 / Optional comparison', 'Review camera and satellite.', 'Use recorded imagery and diagnostic links for optional visual inspection.'],
-    [21.6, '05 / Overlay', 'Blend images for optional review.', 'Adjust opacity to inspect the automatic match.'],
-    [26.5, '06 / Original frame', 'Inspect the original frame.', 'An optional view of the camera image and its satellite crop.'],
-    [30.7, '07 / Automatic operation', 'Automatic matching continues.', 'Normal operation needs no comparison window.'],
-    ].map(([time, ...text]) => [time + introDuration, ...text]),
+    [0, 'KUBECA / Recorded-flight replay', 'Visual navigation.', 'GPU matching. Current C2 interface.'],
+    [2, 'KUBECA C2', 'Follow the flight.', 'Trajectory and onboard imagery.'],
+    [12, 'Visual matching', 'Camera meets map.', 'Recorded image comparison.'],
+    [15, 'KUBECA C2', 'Follow the flight.', 'Trajectory and onboard imagery.'],
   ];
   let currentScene = -1;
   let animation = null;
@@ -52,9 +46,8 @@
       film.classList.toggle('has-intro', isIntro);
       sizePicture();
     }
-    const flightTime = time - introDuration;
-    film.classList.toggle('has-comparison', flightTime >= 15.1 && flightTime < 30.05);
-    progress.style.width = `${100 * Math.min(1, time / (video.duration || 38))}%`;
+    film.classList.toggle('has-comparison', time >= 12 && time < 15);
+    progress.style.width = `${100 * Math.min(1, time / (video.duration || 18))}%`;
   }
 
   function sizePicture() {
