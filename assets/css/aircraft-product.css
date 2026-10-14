@@ -1,7 +1,7 @@
 /* Show the complete aircraft at page width, with the heading in its dark negative space. */
 .cinematic-tech main > #fixed-wing.section {
   display: block;
-  padding: 0 0 120px;
+  padding: 0;
   min-height: 0;
   background: #080d11;
 }
@@ -77,9 +77,6 @@
   line-height: 1.35;
   letter-spacing: -.02em;
 }
-.cinematic-tech #fixed-wing > .fixed-wing-replay {
-  margin-inline: var(--gutter);
-}
 @media (min-width: 1600px) {
   .airframe-heading,
   .cinematic-tech [data-media-slot="fixed-wing-platform"] > figcaption {
@@ -89,14 +86,8 @@
   .airframe-details {
     padding-inline: max(var(--gutter), calc((100vw - 1450px) / 2));
   }
-  .cinematic-tech #fixed-wing > .fixed-wing-replay {
-    margin-inline: max(var(--gutter), calc((100vw - 1450px) / 2));
-  }
 }
 @media (max-width: 900px) {
-  .cinematic-tech main > #fixed-wing.section {
-    padding-block: 0 80px;
-  }
   .airframe-details {
     gap: 35px;
     padding-bottom: 56px;
@@ -124,10 +115,5 @@
     grid-template-columns: 1fr;
     gap: 24px;
     padding-top: 30px;
-  }
-}
-@media (max-width: 600px) {
-  .cinematic-tech main > #fixed-wing.section {
-    padding-bottom: 65px;
   }
 }
