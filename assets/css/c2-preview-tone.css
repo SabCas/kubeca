@@ -1,7 +1,4 @@
-/* The website presents C2 in one turquoise palette. Original captures retain
-   their source colours; the terminal surround and other product imagery do too. */
-.cinematic-home .home-c2-image,
-.cinematic-tech .c2-showcase-screen img,
-.cinematic-tech .c2-input-image img {
+/* A turquoise palette for the homepage's C2 introduction. */
+.cinematic-home .home-c2-image {
   filter: url('../filters/c2-turquoise.svg#c2-turquoise') !important;
 }
