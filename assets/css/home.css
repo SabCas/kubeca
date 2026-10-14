@@ -1,9 +1,9 @@
-/* Homepage: approved dark three-point intro recovered from d93a3b1. */
+/* Homepage: cinematic introduction, C2 software, and two hardware topics. */
 * { box-sizing: border-box; }
 html { scroll-padding-top: var(--home-header-height); }
 body { margin: 0; font-family: Inter, Arial, sans-serif; background: #fff; color: #111; }
 a { color: inherit; }
-.story { position: relative; min-height: 300vh; background: #fff; }
+.story { position: relative; min-height: 200vh; background: #fff; }
 .scene { width: 50%; min-height: 100vh; background: #05080d; }
 .media-fill { width: 100%; height: 100vh; object-fit: cover; display: block; }
 .story-text { position: absolute; top: 0; right: 0; width: 50%; height: calc(100vh - 58px); display: flex; flex-direction: column; justify-content: center; padding: 0 6%; background: #fff; opacity: 1; transform: translateY(0); transition: opacity .52s ease, transform .52s ease; }
@@ -125,7 +125,7 @@ a { color: inherit; }
 .home-who-story{
   position:relative !important;
   display:block !important;
-  min-height:300vh !important;
+  min-height:200vh !important;
   padding-top:clamp(70px,8vh,112px) !important;
   background:var(--kubeca-black) !important;
   overflow:visible !important;
@@ -174,8 +174,7 @@ a { color: inherit; }
 }
 
 .home-who-scene:nth-child(1) .home-who-image{object-position:62% 48% !important;}
-.home-who-scene:nth-child(2) .home-who-image{object-position:54% 50% !important;}
-.home-who-scene:nth-child(3) .home-who-image{object-position:66% 48% !important;}
+.home-who-scene:nth-child(2) .home-who-image{object-position:66% 48% !important;}
 
 .home-who-text,
 .home-who-text.is-fixed,
@@ -488,4 +487,63 @@ html.home-gallery-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .home-gallery-image, .home-gallery-image img, .home-gallery-arrow { transition: none; }
   .home-gallery-image:hover img { transform: none; }
+}
+
+/* Mission software: the same typography and accents as the technology page. */
+.home-c2 {
+  padding: var(--section-space) var(--content-gutter);
+  background: var(--site-background);
+  color: var(--site-text);
+}
+.home-c2-heading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: end; }
+.home-c2-heading h2 { font-size: var(--section-title-size); line-height: 1.05; font-weight: 400; letter-spacing: -.045em; }
+.home-c2-lead { max-width: 35ch; color: var(--site-muted); font-size: var(--lead-size); line-height: 1.55; }
+.home-c2-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin: clamp(40px, 5vw, 72px) 0 40px; padding: 0; list-style: none; }
+.home-c2-workflow li { padding-top: 22px; border-top: 1px solid var(--site-divider); }
+.home-c2-step { display: block; color: var(--site-accent); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.home-c2-workflow h3 { margin: 18px 0 12px; font-size: clamp(20px, 1.8vw, 26px); font-weight: 400; letter-spacing: -.025em; }
+.home-c2-workflow p { font-size: 15px; line-height: 1.7; color: var(--site-muted); }
+.home-c2-preview-label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid var(--site-divider); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.home-c2-preview-label small { font-size: 11px; color: var(--site-muted); letter-spacing: normal; text-transform: none; }
+.home-c2 :focus-visible { outline: 2px solid var(--site-accent); outline-offset: 5px; }
+.home-c2-preview-description { margin: 20px 0 26px; max-width: 100ch; font-size: 15px; line-height: 1.7; color: var(--site-muted); }
+.home-c2-interface figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 20px; margin-top: 16px; font-size: 12px; color: var(--site-text); }
+.home-c2-interface figcaption small { font-size: 12px; color: var(--site-muted); }
+.home-c2-media-note { margin: 14px 0 24px; font-size: 12px; line-height: 1.7; color: var(--site-muted); }
+.home-c2-media-note a { color: var(--site-accent); text-decoration: underline; text-underline-offset: 3px; }
+.home-c2-footnote { display: flex; justify-content: space-between; align-items: start; gap: 24px; padding-top: 28px; border-top: 1px solid var(--site-divider); }
+.home-c2-footnote p { max-width: 70ch; color: var(--site-muted); font-size: 15px; }
+.home-c2-footnote .home-detail-link { margin-top: 0; white-space: nowrap; }
+.home-c2-availability { margin-top: 24px; max-width: 85ch; color: var(--site-muted); font-size: 12px; line-height: 1.7; }
+
+/* Generated hardware is decorative. The actual UI is a separate, undistorted
+   screenshot placed inside the measured screen opening of the 1536×1024 asset. */
+.home-c2-terminal { position: relative; aspect-ratio: 3 / 2; }
+.home-c2-terminal-art { display: block; width: 100%; height: auto; }
+.home-c2-screen { position: absolute; inset: 0; display: block; }
+.home-c2-screen img { position: absolute; left: 7.55%; top: 7.2%; width: 84.9%; height: 71.6%; object-fit: contain; background: #080808; }
+.home-c2-enlarge { position: absolute; right: 9%; bottom: 23%; padding: 10px 14px; border: 1px solid #46636a; background: #080d11ed; color: var(--site-accent); font-size: 12px; }
+.home-c2-screen:hover .home-c2-enlarge { border-color: var(--site-accent); color: #eefeff; }
+.home-c2-demos { display: flex; flex-wrap: wrap; gap: 20px 48px; padding-bottom: 32px; }
+.home-c2-demos .home-detail-link { margin-top: 0; }
+.home-gallery-original { flex-shrink: 0; color: #79e5ed; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.home-gallery-original[hidden] { display: none; }
+.home-gallery-dialog-interface { width: min(1760px, calc(100vw - 48px)); }
+.home-gallery-dialog-interface img { max-height: none; }
+@media (max-width: 900px) {
+  .home-c2-heading { grid-template-columns: 1fr; }
+  .home-c2-lead { max-width: 48ch; }
+}
+@media (max-width: 600px) {
+  .home-c2-heading h2 { font-size: clamp(36px, 10vw, 52px); }
+  .home-c2-lead { font-size: 19px; }
+  .home-c2-workflow { grid-template-columns: 1fr; gap: 28px; }
+  .home-c2-terminal { margin-bottom: 54px; }
+  .home-c2-enlarge { top: 100%; bottom: auto; left: 0; right: 0; min-height: 44px; padding: 12px; }
+  .home-c2-footnote { flex-direction: column; }
+  .home-c2-demos { flex-direction: column; gap: 24px; }
+  .home-gallery-dialog-interface { width: calc(100vw - 24px); }
+  .home-gallery-dialog-interface .home-gallery-dialog-bar { flex-wrap: wrap; }
+  .home-gallery-dialog-interface .home-gallery-dialog-bar p { flex-basis: 100%; }
+  .home-gallery-dialog-interface .home-gallery-close { margin-left: auto; }
 }

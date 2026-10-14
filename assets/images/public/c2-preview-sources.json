@@ -1,0 +1,24 @@
+{
+  "c2-command-terminal-generated.webp": {
+    "title": "Fictional unbranded command terminal",
+    "created": "2026-10-14",
+    "generation": "Built-in image_gen tool; generated from text without reference images",
+    "use": "Decorative hardware presentation. Actual software screenshot overlaid in HTML/CSS.",
+    "prompt": "Use case: product-mockup. Asset type: original command-computer surround for a dark software-company website. Generate a premium photorealistic studio product image of one fictional unbranded compact rugged command workstation / industrial monitor, viewed perfectly straight on at screen centre. The display must be a completely blank uniform matte near-black rectangle, with absolutely no interface, reflections, highlights or glass glare on its interior. We will overlay our real software in code. Landscape 3:2 overall canvas. The visible blank screen has a 16:10 aspect ratio and fills approximately 88 percent of the canvas width, centred horizontally, starting near 6 percent from the top. Keep the display corners square and edges straight, perfectly level and parallel to the image edges. Thin but sturdy dark graphite machined-metal bezel, subtle recessed corner screws, restrained small side grip details, modest bottom bezel, compact low stand and small foot just visible at the bottom. Entire workstation visible, frame nearly fills canvas, almost no empty space around it. Background seamless very dark blue charcoal (#080d11) with a quiet soft ground shadow, restrained soft edge lighting on the casing, sophisticated cinematic photography with physically plausible materials. Screen interior stays flat blank near-black. Entirely invented hardware design, not any identifiable commercial product or competitor device. No people, hands, keyboard, other devices, scenery, cables, weapons, branding, letters, logos, symbols, watermark or text. No perspective tilt, no oblique angle, no dramatic glow, no sci-fi embellishments. The purpose is to foreground readable software, with hardware only as restrained context."
+  },
+  "indoor-generated.jpg": {
+    "title": "Fictional abandoned residential interior",
+    "created": "2026-10-14",
+    "generation": "Built-in image_gen tool; generated from text without reference images",
+    "use": "Illustrative camera image in a read-only UI example. Not captured by a KUBECA aircraft.",
+    "prompt": "Use case: photorealistic-natural. Asset type: original illustrative camera image for the KUBECA website and a read-only quadcopter UI example. Create a completely fictional empty worn residential building interior, as seen by a small indoor inspection quadcopter hovering at approximately 1.3 metres. Landscape 16:9 composition, level camera, modest wide-angle lens, physically plausible hallway leading into bare rooms. Chipped grey plaster, exposed concrete, dusty floor, a little scattered plaster debris, plain unpainted door openings, soft daylight through a side window. Utilitarian and abandoned, never a hotel or luxury interior. Natural understated colour, desaturated cool greys with muted warm daylight, realistic texture, clear spatial structure even as a small camera thumbnail. It must be an invented location from scratch, not a reproduction of any photograph. No people, no weapons, no combat, no blood, no drone visible, no identifying architecture, no logos, no text, no HUD, no watermark. Only the interior camera-view image, edge to edge."
+  },
+  "c2-mission-fleet-preview-20261014.webp": {
+    "captured": "2026-10-14",
+    "source": "KUBECA C2 read-only workspace example, scripts/check_fleet_map_ui.py",
+    "data": "Illustrative aircraft data and satellite background. No aircraft connected.",
+    "selection": "All five aircraft visible. Selected quad violet; other aircraft cyan.",
+    "interior": "AI-generated image; not drone footage.",
+    "quad_viewpoint": "Short illustrative direction cone; not a verified visible ground footprint."
+  }
+}
