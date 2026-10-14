@@ -61,17 +61,14 @@ html.c2-gallery-open { overflow: hidden; }
 }
 .c2-showcase-heading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: end; }
 .c2-showcase-lead { max-width: 35ch; color: var(--site-muted); font-size: var(--lead-size); line-height: 1.55; }
-.c2-input-preview { margin-top: clamp(40px, 5vw, 72px); }
-.c2-input-heading { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: clamp(32px, 6vw, 100px); margin-bottom: 28px; }
-.c2-input-heading h3 { font-size: clamp(24px, 2.3vw, 32px); font-weight: 400; letter-spacing: -.025em; }
-.c2-input-heading p { max-width: 52ch; font-size: 15px; line-height: 1.7; color: var(--site-muted); }
-.c2-input-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 3vw, 48px); }
+.c2-input-overlay { position: absolute; z-index: 2; left: var(--content-gutter); bottom: 6%; width: min(560px, 43%); padding: 18px; background: #080f13f5; border: 1px solid #47737a; box-shadow: 0 18px 70px #000a; }
+.c2-input-overlay-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; }
+.c2-input-overlay-heading h3 { font-size: clamp(20px, 1.8vw, 26px); font-weight: 400; letter-spacing: -.025em; }
+.c2-input-overlay-heading span { font-size: 10px; color: var(--site-accent); letter-spacing: .1em; text-transform: uppercase; }
 .c2-input-image { display: block; border: 1px solid var(--site-divider); background: #0b1110; }
 .c2-input-image:hover { border-color: var(--site-accent); }
 .c2-input-image img { display: block; width: 100%; height: auto; }
-.c2-input-examples figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; margin-top: 16px; font-size: 13px; }
-.c2-input-examples figcaption small { font-size: 11px; color: var(--site-muted); }
-.c2-input-examples figure > p { margin-top: 10px; color: var(--site-muted); font-size: 14px; line-height: 1.7; }
+.c2-input-overlay > p { margin-top: 14px; color: var(--site-muted); font-size: 12px; line-height: 1.6; }
 .c2-showcase-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin: clamp(40px, 5vw, 72px) 0 40px; padding: 0; list-style: none; }
 .c2-showcase-workflow li { padding-top: 22px; border-top: 1px solid var(--site-divider); }
 .c2-showcase-step { display: block; color: var(--site-accent); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
@@ -93,7 +90,8 @@ html.c2-gallery-open { overflow: hidden; }
 
 /* Generated hardware is decorative. The actual UI is a separate, undistorted
    screenshot placed inside the measured screen opening of the 1536×1024 asset. */
-.c2-showcase-terminal { position: relative; aspect-ratio: 3 / 2; margin-inline: calc(-1 * var(--content-gutter)); }
+.c2-showcase-visual { position: relative; margin-inline: calc(-1 * var(--content-gutter)); }
+.c2-showcase-terminal { position: relative; aspect-ratio: 3 / 2; }
 .c2-showcase-terminal-art { display: block; width: 100%; height: auto; }
 .c2-showcase-screen { position: absolute; inset: 0; display: block; }
 .c2-showcase-screen img { position: absolute; left: 7.55%; top: 7.2%; width: 84.9%; height: 71.6%; object-fit: contain; background: #080808; }
@@ -106,13 +104,13 @@ html.c2-gallery-open { overflow: hidden; }
 @media (max-width: 900px) {
   .c2-showcase-heading { grid-template-columns: 1fr; }
   .c2-showcase-lead { max-width: 48ch; }
-  .c2-input-heading { grid-template-columns: 1fr; gap: 14px; }
-  .c2-input-examples { grid-template-columns: 1fr; gap: 32px; }
+  .c2-input-overlay { position: relative; left: auto; bottom: auto; width: auto; margin: -48px var(--content-gutter) 24px; }
 }
 @media (max-width: 600px) {
   .c2-showcase-lead { font-size: 19px; }
   .c2-showcase-workflow { grid-template-columns: 1fr; gap: 28px; }
   .c2-showcase-terminal { margin-bottom: 54px; }
+  .c2-input-overlay { margin-top: 0; padding: 14px; }
   .c2-showcase-enlarge { top: 100%; bottom: auto; left: var(--content-gutter); right: var(--content-gutter); min-height: 44px; padding: 12px; }
   .c2-showcase-footnote { flex-direction: column; }
   .c2-gallery-dialog-interface { width: calc(100vw - 24px); }

@@ -22,7 +22,8 @@
         original.href = link.href;
       }
       const label = link.closest('figure').querySelector('figcaption');
-      caption.textContent = `${label.firstChild.textContent.trim()} · ${label.querySelector('small').textContent}`;
+      caption.textContent = link.dataset.galleryCaption
+        || `${label.firstChild.textContent.trim()} · ${label.querySelector('small').textContent}`;
       dialog.showModal();
       document.documentElement.classList.add('c2-gallery-open');
     });
