@@ -1,0 +1,115 @@
+.c2-gallery-dialog {
+  width: min(1120px,calc(100vw - 48px));
+  max-width: none;
+  max-height: 90svh;
+  padding: 0;
+  border: 1px solid #29d8e788;
+  background: #080e12;
+  color: #edf3f5;
+  box-shadow: 0 24px 100px #0009;
+  font-family: inherit;
+}
+.c2-gallery-dialog::backdrop { background: #02060ce6; }
+.c2-gallery-dialog-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 20px; }
+.c2-gallery-dialog-bar p { font-size: 14px; }
+.c2-gallery-dialog img { width: 100%; height: auto; max-height: 74svh; object-fit: contain; background: #05080d; }
+.c2-gallery-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 0 0 12px;
+  border: 0;
+  border-bottom: 1px solid #29d8e766;
+  background: transparent;
+  color: #79e5ed;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.c2-gallery-close span { font-size: 21px; line-height: 1; }
+.c2-gallery-close:hover { border-color: #79e5ed; color: #eefeff; }
+.c2-gallery-close:focus-visible { outline: 2px solid #79e5ed; outline-offset: 4px; }
+html.c2-gallery-open { overflow: hidden; }
+.c2-showcase .home-detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  align-self: flex-start;
+  margin-top: 28px;
+  padding-bottom: 12px;
+  color: #79e5ed;
+  border-bottom: 1px solid #29d8e766;
+  font-size: 13px;
+  letter-spacing: .025em;
+  transition: color .2s, border-color .2s;
+}
+.c2-showcase .home-detail-link:hover { color: #eefeff; border-color: #79e5ed; }
+.c2-showcase .home-detail-link[hidden] { display: none; }
+.c2-showcase .home-detail-link > span {
+  margin: 0 !important;
+  color: inherit !important;
+  font-size: 18px !important;
+  letter-spacing: 0 !important;
+}
+/* Mission software: the same typography and accents as the technology page. */
+.c2-showcase {
+  padding: var(--section-space) var(--content-gutter);
+  background: var(--site-background);
+  color: var(--site-text);
+}
+.c2-showcase-heading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: end; }
+.c2-showcase-heading h2 { font-size: var(--section-title-size); line-height: 1.05; font-weight: 400; letter-spacing: -.045em; }
+.c2-showcase-lead { max-width: 35ch; color: var(--site-muted); font-size: var(--lead-size); line-height: 1.55; }
+.c2-showcase-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin: clamp(40px, 5vw, 72px) 0 40px; padding: 0; list-style: none; }
+.c2-showcase-workflow li { padding-top: 22px; border-top: 1px solid var(--site-divider); }
+.c2-showcase-step { display: block; color: var(--site-accent); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.c2-showcase-workflow h3 { margin: 18px 0 12px; font-size: clamp(20px, 1.8vw, 26px); font-weight: 400; letter-spacing: -.025em; }
+.c2-showcase-workflow p { font-size: 15px; line-height: 1.7; color: var(--site-muted); }
+.c2-showcase-preview-label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid var(--site-divider); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.c2-showcase-preview-label small { font-size: 11px; color: var(--site-muted); letter-spacing: normal; text-transform: none; }
+.c2-showcase :focus-visible { outline: 2px solid var(--site-accent); outline-offset: 5px; }
+.c2-showcase-preview-description { margin: 20px 0 26px; max-width: 100ch; font-size: 15px; line-height: 1.7; color: var(--site-muted); }
+.c2-showcase-interface figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 20px; margin-top: 16px; font-size: 12px; color: var(--site-text); }
+.c2-showcase-interface figcaption small { font-size: 12px; color: var(--site-muted); }
+.c2-showcase-media-note { margin: 14px 0 24px; font-size: 12px; line-height: 1.7; color: var(--site-muted); }
+.c2-showcase-media-note a { color: var(--site-accent); text-decoration: underline; text-underline-offset: 3px; }
+.c2-showcase-footnote { display: flex; justify-content: space-between; align-items: start; gap: 24px; padding-top: 28px; border-top: 1px solid var(--site-divider); }
+.c2-showcase-footnote p { max-width: 70ch; color: var(--site-muted); font-size: 15px; }
+.c2-showcase-footnote .home-detail-link { margin-top: 0; white-space: nowrap; }
+.c2-showcase-availability { margin-top: 24px; max-width: 85ch; color: var(--site-muted); font-size: 12px; line-height: 1.7; }
+
+/* Generated hardware is decorative. The actual UI is a separate, undistorted
+   screenshot placed inside the measured screen opening of the 1536×1024 asset. */
+.c2-showcase-terminal { position: relative; aspect-ratio: 3 / 2; }
+.c2-showcase-terminal-art { display: block; width: 100%; height: auto; }
+.c2-showcase-screen { position: absolute; inset: 0; display: block; }
+.c2-showcase-screen img { position: absolute; left: 7.55%; top: 7.2%; width: 84.9%; height: 71.6%; object-fit: contain; background: #080808; }
+.c2-showcase-enlarge { position: absolute; right: 9%; bottom: 23%; padding: 10px 14px; border: 1px solid #46636a; background: #080d11ed; color: var(--site-accent); font-size: 12px; }
+.c2-showcase-screen:hover .c2-showcase-enlarge { border-color: var(--site-accent); color: #eefeff; }
+.c2-showcase-demos { display: flex; flex-wrap: wrap; gap: 20px 48px; padding-bottom: 32px; }
+.c2-showcase-demos .home-detail-link { margin-top: 0; }
+.c2-gallery-original { flex-shrink: 0; color: #79e5ed; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.c2-gallery-original[hidden] { display: none; }
+.c2-gallery-dialog-interface { width: min(1760px, calc(100vw - 48px)); }
+.c2-gallery-dialog-interface img { max-height: none; }
+@media (max-width: 900px) {
+  .c2-showcase-heading { grid-template-columns: 1fr; }
+  .c2-showcase-lead { max-width: 48ch; }
+}
+@media (max-width: 600px) {
+  .c2-showcase-heading h2 { font-size: clamp(36px, 10vw, 52px); }
+  .c2-showcase-lead { font-size: 19px; }
+  .c2-showcase-workflow { grid-template-columns: 1fr; gap: 28px; }
+  .c2-showcase-terminal { margin-bottom: 54px; }
+  .c2-showcase-enlarge { top: 100%; bottom: auto; left: 0; right: 0; min-height: 44px; padding: 12px; }
+  .c2-showcase-footnote { flex-direction: column; }
+  .c2-showcase-demos { flex-direction: column; gap: 24px; }
+  .c2-gallery-dialog-interface { width: calc(100vw - 24px); }
+  .c2-gallery-dialog-interface .c2-gallery-dialog-bar { flex-wrap: wrap; }
+  .c2-gallery-dialog-interface .c2-gallery-dialog-bar p { flex-basis: 100%; }
+  .c2-gallery-dialog-interface .c2-gallery-close { margin-left: auto; }
+}
+
+.cinematic-tech #c2 { background: var(--site-background); }

@@ -50,7 +50,6 @@
   if (!dialog || typeof dialog.showModal !== 'function') return;
   const preview = dialog.querySelector('img');
   const caption = dialog.querySelector('#home-gallery-caption');
-  const original = dialog.querySelector('.home-gallery-original');
 
   document.querySelectorAll('[data-gallery-image]').forEach((link) => {
     link.addEventListener('click', (event) => {
@@ -59,12 +58,6 @@
       event.preventDefault();
       preview.src = link.href;
       preview.alt = link.querySelector('img').alt;
-      const isInterface = link.classList.contains('home-c2-screen');
-      dialog.classList.toggle('home-gallery-dialog-interface', isInterface);
-      if (original) {
-        original.hidden = !isInterface;
-        original.href = link.href;
-      }
       const label = link.closest('figure').querySelector('figcaption');
       caption.textContent = `${label.firstChild.textContent.trim()} · ${label.querySelector('small').textContent}`;
       dialog.showModal();
