@@ -1,0 +1,62 @@
+{
+  "capture": "Current KUBECA C2 interface, including the original recorded checking dialog and overlay tab",
+  "presentation": "Fixed framing: start near point 21, briefly open one original checking window, continue to near the end; short dissolves between source segments",
+  "capture_resolution": [
+    1920,
+    1080
+  ],
+  "website_duration_s": 18,
+  "source_speed": 1.5,
+  "source_segments": [
+    {
+      "source_raw_start_s": 178.5,
+      "website_duration_s": 5.2,
+      "name": "point-21"
+    },
+    {
+      "source_raw_start_s": 252.35,
+      "website_duration_s": 4.2,
+      "name": "one-check"
+    },
+    {
+      "source_raw_start_s": 273.0,
+      "website_duration_s": 9.0,
+      "name": "near-end"
+    }
+  ],
+  "scenes": {
+    "review_open_s": 5.185613950000459,
+    "review_end_s": 9.2,
+    "final_source_raw_end_s": 286.5
+  },
+  "source_context": "Recorded navigation and GPS-aided terrain-height inputs; not a GNSS-denied benchmark",
+  "comparison_links": "Reconstructed visual diagnostic links",
+  "editorial_labels": "Internal method names and reference-source captions replaced for the public film; recorded imagery, quality values, states and controls preserved",
+  "ui_sha256": {
+    "src/c2_web/web/app.js": "60ebf0850b8ed4d9908a30a3c1404f2456120c7cb85aa6ce0545372459355547",
+    "src/c2_web/web/index.html": "23fc94d7bf70f6f2dfe791a3ced670041544eaee6c32a1034c4d72028da550e2",
+    "src/c2_web/web/styles.css": "d2b39adb278313160e7944c9c9f6948b62301fa91a6c65b1ab55facc8a647288"
+  },
+  "raw_sha256": "5b385af707d4eae0bd17279df70ce07aae9d5084e8bfa8b6c2dcd38b3b1cbe10",
+  "map_attribution": "LGL-BW (2026), Datenlizenz Deutschland \u2013 Namensnennung \u2013 Version 2.0",
+  "map_license": "https://www.govdata.de/dl-de/by-2-0",
+  "outputs": [
+    {
+      "file": "fixed-wing-c2-current-ui-v4-1080p.mp4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "e1a405971d9abe2b0adbe69a92c2b94195a5879f51b467274423f5c721c49d36"
+    },
+    {
+      "file": "fixed-wing-c2-current-ui-v4-4k.mp4",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "sha256": "cc5cfc055739838e2db07d7c48c64b104dcdb4d960e51282746da6e791cdad23"
+    }
+  ],
+  "4k_encoding": "Upscaled from the native 1080p recording"
+}

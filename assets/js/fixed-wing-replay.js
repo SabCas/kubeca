@@ -14,12 +14,10 @@
   const copy = film.querySelector('[data-replay-copy]');
   const step = film.querySelector('[data-replay-step]');
   const progress = film.querySelector('[data-replay-progress]');
-  const introDuration = 2;
   const scenes = [
-    [0, 'KUBECA C2 / Recorded replay', 'Automatic visual navigation.', 'Trajectory and onboard imagery.'],
-    [2, 'Visual anchors', 'Navigation runs automatically.', 'Follow the flight in one view.'],
-    [9.5, 'Optional review', 'Check a visual anchor.', 'Only when needed. Navigation runs automatically.'],
-    [13.5, 'Visual anchors', 'Navigation runs automatically.', 'Checking an anchor is optional.'],
+    [0, 'Recorded replay', 'Automatic visual navigation.', 'Trajectory and onboard imagery.'],
+    [5.2, 'Optional review', 'Check one visual anchor.', 'Navigation runs automatically.'],
+    [9.2, 'Visual anchors', 'The flight continues.', 'Checking an anchor is optional.'],
   ];
   let currentScene = -1;
   let animation = null;
@@ -41,12 +39,7 @@
         { duration: 600, easing: 'cubic-bezier(.22,1,.36,1)' }
       );
     }
-    const isIntro = time < introDuration;
-    if (film.classList.contains('has-intro') !== isIntro) {
-      film.classList.toggle('has-intro', isIntro);
-      sizePicture();
-    }
-    film.classList.toggle('has-comparison', time >= 9.5 && time < 13.5);
+    film.classList.toggle('has-comparison', time >= 5.2 && time < 9.2);
     progress.style.width = `${100 * Math.min(1, time / (video.duration || 18))}%`;
   }
 
@@ -78,7 +71,7 @@
   }
 
   function update() {
-    const cover = video.paused && video.currentTime < introDuration;
+    const cover = video.paused && video.currentTime < .1;
     film.classList.toggle('has-cover', cover);
     toggle.hidden = !cover;
     video.controls = !cover;

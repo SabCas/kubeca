@@ -19,3 +19,9 @@
  [data-fixed-wing-replay].has-intro .replay-stage:fullscreen .replay-caption{width:calc(var(--fixed-wing-picture-width,100vw)*.90)}
 }
 @media(prefers-reduced-motion:reduce){.fixed-wing-intro-background{transition:none!important}}
+
+/* Keep the recorded workspace and its checking window fully visible. */
+#fixed-wing-replay.native-workspace .replay-caption{position:static;width:auto;min-height:0;margin-top:20px;padding:0;border:0;background:none;backdrop-filter:none;pointer-events:auto}
+#fixed-wing-replay.native-workspace .replay-caption h3{font-size:clamp(21px,2vw,28px);line-height:1.2;margin:0 0 6px}
+.cinematic-tech #fixed-wing-replay.native-workspace .replay-caption p{font-size:16px;line-height:1.5;margin:0}
+#fixed-wing-replay.native-workspace .replay-step{font-size:11px;margin-bottom:8px}
