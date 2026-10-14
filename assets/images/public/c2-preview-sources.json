@@ -20,32 +20,5 @@
     "selection": "All five aircraft visible. Selected quad violet; other aircraft cyan.",
     "interior": "AI-generated image; not drone footage.",
     "quad_viewpoint": "Short illustrative direction cone; not a verified visible ground footprint."
-  },
-  "c2-story-fleet-20261014.webp": {
-    "captured": "2026-10-14",
-    "source": "Current KUBECA C2 UI through the read-only WorkspaceExample fixture. Capture script: build/homepage-review/capture_c2_story.py in c2-fleet.",
-    "data": "Illustrative telemetry and satellite background. No connected aircraft, ROS or Gazebo.",
-    "scope": "All five aircraft in the mission, no aircraft selected.",
-    "presentation": "One scene in an 18-second browser animation. No simulated motion or invented live telemetry; gentle movement and crossfades apply to the presentation only.",
-    "recorded_flight": false,
-    "gpu_matching_recording": false
-  },
-  "c2-story-aircraft-20261014.webp": {
-    "captured": "2026-10-14",
-    "source": "Current KUBECA C2 UI through the read-only WorkspaceExample fixture. Capture script: build/homepage-review/capture_c2_story.py in c2-fleet.",
-    "data": "Illustrative telemetry and satellite background. No connected aircraft, ROS or Gazebo.",
-    "scope": "QD-01 selected in violet; all five aircraft remain visible.",
-    "presentation": "One scene in an 18-second browser animation. No simulated motion or invented live telemetry; gentle movement and crossfades apply to the presentation only.",
-    "recorded_flight": false,
-    "gpu_matching_recording": false
-  },
-  "c2-story-navigation-20261014.webp": {
-    "captured": "2026-10-14",
-    "source": "Current KUBECA C2 UI through the read-only WorkspaceExample fixture. Capture script: build/homepage-review/capture_c2_story.py in c2-fleet.",
-    "data": "Illustrative telemetry and satellite background. No connected aircraft, ROS or Gazebo.",
-    "scope": "Fixed-wing group; two aircraft, FW-01 selected. Illustrative progress and camera image.",
-    "presentation": "One scene in an 18-second browser animation. No simulated motion or invented live telemetry; gentle movement and crossfades apply to the presentation only.",
-    "recorded_flight": false,
-    "gpu_matching_recording": false
   }
 }
