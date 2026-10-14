@@ -16,10 +16,10 @@
   const progress = film.querySelector('[data-replay-progress]');
   const introDuration = 2;
   const scenes = [
-    [0, 'KUBECA / Recorded-flight replay', 'Visual navigation.', 'GPU matching. Current C2 interface.'],
-    [2, 'KUBECA C2', 'Follow the flight.', 'Trajectory and onboard imagery.'],
-    [12, 'Visual matching', 'Camera meets map.', 'Recorded image comparison.'],
-    [15, 'KUBECA C2', 'Follow the flight.', 'Trajectory and onboard imagery.'],
+    [0, 'KUBECA C2 / Recorded replay', 'Automatic visual navigation.', 'Trajectory and onboard imagery.'],
+    [2, 'Visual anchors', 'Navigation runs automatically.', 'Follow the flight in one view.'],
+    [9.5, 'Optional review', 'Check a visual anchor.', 'Only when needed. Navigation runs automatically.'],
+    [13.5, 'Visual anchors', 'Navigation runs automatically.', 'Checking an anchor is optional.'],
   ];
   let currentScene = -1;
   let animation = null;
@@ -46,7 +46,7 @@
       film.classList.toggle('has-intro', isIntro);
       sizePicture();
     }
-    film.classList.toggle('has-comparison', time >= 12 && time < 15);
+    film.classList.toggle('has-comparison', time >= 9.5 && time < 13.5);
     progress.style.width = `${100 * Math.min(1, time / (video.duration || 18))}%`;
   }
 
