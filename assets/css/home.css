@@ -177,6 +177,19 @@ a { color: inherit; }
 .home-who-scene:nth-child(2) .home-who-image{object-position:54% 50% !important;}
 .home-who-scene:nth-child(3) .home-who-image{object-position:66% 48% !important;}
 
+/* Show the current mission workspace clearly inside the existing story. */
+.home-who-story .home-who-scene .home-c2-image {
+  object-fit: contain !important;
+  object-position: 55% center !important;
+  transform: none !important;
+  filter: none !important;
+  background: #05080d;
+  will-change: auto !important;
+}
+.home-who-story .home-who-scene.home-c2-scene:after {
+  background: linear-gradient(90deg, transparent 86%, #05080d 100%) !important;
+}
+
 .home-who-text,
 .home-who-text.is-fixed,
 .home-who-text.is-bottom{
@@ -244,6 +257,12 @@ body { background: #05080d; }
   .home-who-story .home-who-scene + .home-who-scene { margin-top: 48px !important; }
   .home-who-story .home-who-scene:after { bottom: auto !important; height: 64svh !important; background: linear-gradient(180deg,rgba(5,8,13,0),rgba(5,8,13,.68)) !important; }
   .home-who-image { position: relative !important; height: 64svh !important; transform: none !important; }
+  .home-who-story .home-who-scene .home-c2-image { height: auto !important; }
+  .home-who-story .home-who-scene.home-c2-scene:after {
+    height: auto !important;
+    aspect-ratio: 1380 / 887;
+    background: linear-gradient(180deg, transparent 88%, #05080d 100%) !important;
+  }
   .home-who-text { display: none !important; }
   .mobile-story-copy { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip-path: none; padding: 44px 24px 62px; background: #05080d; }
   .mobile-story-copy span { display: block; color: #8c929b; font-size: 10px; }

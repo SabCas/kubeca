@@ -28,5 +28,14 @@
     "instruction": "Explore for 300 seconds; return home.",
     "speech": "Text entered in the actual C2 task field.",
     "presentation": "One static preview of the shared speech/text task field, layered over the mission image on desktop. Moves below it on narrow screens."
+  },
+  "c2-home-workspace-20261014.webp": {
+    "captured": "2026-10-14",
+    "source": "Mission workspace and selected-aircraft panel in current KUBECA C2, through the read-only WorkspaceExample fixture. Capture script: build/homepage-review/capture_home_c2.py in c2-fleet.",
+    "dimensions": "1380 x 887",
+    "data": "Illustrative telemetry and satellite background. No connected aircraft or commands sent.",
+    "selection": "QD-01 selected in violet; its illustrative camera and status are visible alongside the aircraft map.",
+    "interior": "AI-generated interior image; not drone footage.",
+    "presentation": "Current software workspace replaces the previous concept illustration in the existing homepage story."
   }
 }
