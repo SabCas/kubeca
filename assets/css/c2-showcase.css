@@ -82,7 +82,7 @@ html.c2-gallery-open { overflow: hidden; }
 
 /* Generated hardware is decorative. The actual UI is a separate, undistorted
    screenshot placed inside the measured screen opening of the 1536×1024 asset. */
-.c2-showcase-terminal { position: relative; aspect-ratio: 3 / 2; }
+.c2-showcase-terminal { position: relative; aspect-ratio: 3 / 2; margin-inline: calc(-1 * var(--content-gutter)); }
 .c2-showcase-terminal-art { display: block; width: 100%; height: auto; }
 .c2-showcase-screen { position: absolute; inset: 0; display: block; }
 .c2-showcase-screen img { position: absolute; left: 7.55%; top: 7.2%; width: 84.9%; height: 71.6%; object-fit: contain; background: #080808; }
@@ -100,7 +100,7 @@ html.c2-gallery-open { overflow: hidden; }
   .c2-showcase-lead { font-size: 19px; }
   .c2-showcase-workflow { grid-template-columns: 1fr; gap: 28px; }
   .c2-showcase-terminal { margin-bottom: 54px; }
-  .c2-showcase-enlarge { top: 100%; bottom: auto; left: 0; right: 0; min-height: 44px; padding: 12px; }
+  .c2-showcase-enlarge { top: 100%; bottom: auto; left: var(--content-gutter); right: var(--content-gutter); min-height: 44px; padding: 12px; }
   .c2-showcase-footnote { flex-direction: column; }
   .c2-gallery-dialog-interface { width: calc(100vw - 24px); }
   .c2-gallery-dialog-interface .c2-gallery-dialog-bar { flex-wrap: wrap; }
