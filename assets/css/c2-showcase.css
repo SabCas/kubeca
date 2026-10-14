@@ -32,27 +32,6 @@
 .c2-gallery-close:hover { border-color: #79e5ed; color: #eefeff; }
 .c2-gallery-close:focus-visible { outline: 2px solid #79e5ed; outline-offset: 4px; }
 html.c2-gallery-open { overflow: hidden; }
-.c2-showcase .home-detail-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 24px;
-  align-self: flex-start;
-  margin-top: 28px;
-  padding-bottom: 12px;
-  color: #79e5ed;
-  border-bottom: 1px solid #29d8e766;
-  font-size: 13px;
-  letter-spacing: .025em;
-  transition: color .2s, border-color .2s;
-}
-.c2-showcase .home-detail-link:hover { color: #eefeff; border-color: #79e5ed; }
-.c2-showcase .home-detail-link[hidden] { display: none; }
-.c2-showcase .home-detail-link > span {
-  margin: 0 !important;
-  color: inherit !important;
-  font-size: 18px !important;
-  letter-spacing: 0 !important;
-}
 /* Mission software: the same typography and accents as the technology page. */
 .c2-showcase {
   padding: var(--section-space) var(--content-gutter);
@@ -69,24 +48,19 @@ html.c2-gallery-open { overflow: hidden; }
 .c2-input-image:hover { border-color: var(--site-accent); }
 .c2-input-image img { display: block; width: 100%; height: auto; }
 .c2-input-overlay > p { margin-top: 14px; color: var(--site-muted); font-size: 12px; line-height: 1.6; }
-.c2-showcase-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin: clamp(40px, 5vw, 72px) 0 40px; padding: 0; list-style: none; }
+.c2-showcase-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin: clamp(40px, 5vw, 72px) 0 0; padding: 0; list-style: none; }
 .c2-showcase-workflow li { padding-top: 22px; border-top: 1px solid var(--site-divider); }
 .c2-showcase-step { display: block; color: var(--site-accent); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
 .c2-showcase-workflow h3 { margin: 18px 0 12px; font-size: clamp(20px, 1.8vw, 26px); font-weight: 400; letter-spacing: -.025em; }
 .c2-showcase-workflow p { font-size: 15px; line-height: 1.7; color: var(--site-muted); }
 .c2-showcase-previews { margin-top: clamp(32px, 4vw, 56px); }
 .c2-showcase-preview-label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid var(--site-divider); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
-.c2-showcase-preview-label small { font-size: 11px; color: var(--site-muted); letter-spacing: normal; text-transform: none; }
 .c2-showcase :focus-visible { outline: 2px solid var(--site-accent); outline-offset: 5px; }
 .c2-showcase-preview-description { margin: 20px 0 26px; max-width: 100ch; font-size: 15px; line-height: 1.7; color: var(--site-muted); }
 .c2-showcase-interface figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 20px; margin-top: 16px; font-size: 12px; color: var(--site-text); }
 .c2-showcase-interface figcaption small { font-size: 12px; color: var(--site-muted); }
 .c2-showcase-media-note { margin: 14px 0 24px; font-size: 12px; line-height: 1.7; color: var(--site-muted); }
 .c2-showcase-media-note a { color: var(--site-accent); text-decoration: underline; text-underline-offset: 3px; }
-.c2-showcase-footnote { display: flex; justify-content: space-between; align-items: start; gap: 24px; padding-top: 28px; border-top: 1px solid var(--site-divider); }
-.c2-showcase-footnote p { max-width: 70ch; color: var(--site-muted); font-size: 15px; }
-.c2-showcase-footnote .home-detail-link { margin-top: 0; white-space: nowrap; }
-.c2-showcase-availability { margin-top: 24px; max-width: 85ch; color: var(--site-muted); font-size: 12px; line-height: 1.7; }
 
 /* Generated hardware is decorative. The actual UI is a separate, undistorted
    screenshot placed inside the measured screen opening of the 1536×1024 asset. */
@@ -112,7 +86,6 @@ html.c2-gallery-open { overflow: hidden; }
   .c2-showcase-terminal { margin-bottom: 54px; }
   .c2-input-overlay { margin-top: 0; padding: 14px; }
   .c2-showcase-enlarge { top: 100%; bottom: auto; left: var(--content-gutter); right: var(--content-gutter); min-height: 44px; padding: 12px; }
-  .c2-showcase-footnote { flex-direction: column; }
   .c2-gallery-dialog-interface { width: calc(100vw - 24px); }
   .c2-gallery-dialog-interface .c2-gallery-dialog-bar { flex-wrap: wrap; }
   .c2-gallery-dialog-interface .c2-gallery-dialog-bar p { flex-basis: 100%; }
