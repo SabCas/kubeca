@@ -62,23 +62,13 @@
       if (motion.matches) {
         image.style.removeProperty('--story-shift');
         image.style.removeProperty('--story-scale');
-        image.style.removeProperty('--story-opacity');
         return;
       }
-      if (!desktop.matches) {
-        const mediaRect = scene.querySelector('.home-who-media').getBoundingClientRect();
-        const entry = Math.max(0, Math.min(1, (innerHeight - mediaRect.top) / (innerHeight * .7)));
-        // Smaller mobile movement settles at full size once the image is in view.
-        image.style.setProperty('--story-shift', ((1 - entry) * 2).toFixed(2) + '%');
-        image.style.setProperty('--story-scale', (1 + (1 - entry) * .06).toFixed(3));
-        image.style.setProperty('--story-opacity', (.72 + entry * .28).toFixed(3));
-        return;
-      }
-      image.style.removeProperty('--story-opacity');
-      const sceneRect = scene.getBoundingClientRect();
+      const sceneRect = (desktop.matches ? scene : scene.querySelector('.home-who-media')).getBoundingClientRect();
       const sceneProgress = Math.max(0, Math.min(1, (innerHeight - sceneRect.top) / (innerHeight + sceneRect.height)));
-      image.style.setProperty('--story-shift', ((sceneProgress - .5) * 8).toFixed(2) + '%');
-      image.style.setProperty('--story-scale', (1.12 + Math.abs(sceneProgress - .5) * .055).toFixed(3));
+      image.style.setProperty('--story-shift', ((sceneProgress - .5) * (desktop.matches ? 8 : 4)).toFixed(2) + '%');
+      // A constant mobile scale keeps the image steady while it glides sideways.
+      image.style.setProperty('--story-scale', desktop.matches ? (1.12 + Math.abs(sceneProgress - .5) * .055).toFixed(3) : '1.06');
     });
   }
 

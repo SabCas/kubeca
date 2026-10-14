@@ -250,7 +250,7 @@ body { background: #05080d; }
   .home-who-story .home-who-scene + .home-who-scene { margin-top: 48px !important; }
   .home-who-story .home-who-scene:after { bottom: auto !important; height: 64svh !important; background: linear-gradient(180deg,rgba(5,8,13,0),rgba(5,8,13,.68)) !important; }
   .home-who-media { position: relative; height: 64svh; }
-  .home-who-image { height: 100% !important; transform: scale(var(--story-scale,1)) translate3d(var(--story-shift,0),0,0) !important; opacity: var(--story-opacity,1); }
+  .home-who-image { height: 100% !important; transform: scale(var(--story-scale,1)) translate3d(var(--story-shift,0),0,0) !important; }
   .home-who-scene:nth-child(2) .home-who-image { object-position: 74% 50% !important; }
   .home-who-text { display: none !important; }
   .mobile-story-copy { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip-path: none; padding: 44px 24px 62px; background: #05080d; }
