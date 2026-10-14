@@ -1,32 +1,38 @@
 {
-  "capture": "Current KUBECA C2 interface, including the original recorded checking dialog and overlay tab",
-  "presentation": "Fixed framing: start near point 21, briefly open one original checking window, continue to near the end; short dissolves between source segments",
+  "capture": "Current KUBECA C2 interface, including the original recorded checking dialog",
+  "presentation": "Illustrative navigation opening, fixed C2 framing from point 21, one original checking window with a gradual opening, and flight almost to the end",
+  "presentation_revision": 6,
+  "review_presentation": "Original comparison window fades in over 0.9 seconds; only the recorded comparison pane is held at the end; aircraft camera and header continue from the recorded stream; no second tab shown",
+  "intro": "2.4 seconds from the previously approved illustrative visual-navigation opening",
+  "map_presentation": "Uniform crop and enlargement of recorded map content to fill its viewport; trajectory and markers share the same transform; fixed UI overlays restored; the last pre-dialog workspace frame is held behind the recorded review window",
   "capture_resolution": [
     1920,
     1080
   ],
-  "website_duration_s": 18,
-  "source_speed": 1.5,
+  "website_duration_s": 23.12,
+  "source_speed": 1.25,
   "source_segments": [
     {
       "source_raw_start_s": 178.5,
-      "website_duration_s": 5.2,
+      "website_duration_s": 6.4,
       "name": "point-21"
     },
     {
       "source_raw_start_s": 252.35,
-      "website_duration_s": 4.2,
+      "website_duration_s": 5.6,
       "name": "one-check"
     },
     {
       "source_raw_start_s": 273.0,
-      "website_duration_s": 9.0,
+      "website_duration_s": 10.8,
       "name": "near-end"
     }
   ],
   "scenes": {
-    "review_open_s": 5.185613950000459,
-    "review_end_s": 9.2,
+    "intro_transition_s": 1.68,
+    "review_open_s": 7.382736740000551,
+    "review_fully_visible_s": 8.282736740000551,
+    "review_end_s": 12.76,
     "final_source_raw_end_s": 286.5
   },
   "source_context": "Recorded navigation and GPS-aided terrain-height inputs; not a GNSS-denied benchmark",
@@ -47,7 +53,7 @@
         1920,
         1080
       ],
-      "sha256": "e1a405971d9abe2b0adbe69a92c2b94195a5879f51b467274423f5c721c49d36"
+      "sha256": "33eee9b5e8ce84827eb424376d39a59afe140e9f68281be5c189b2a0af5adb2c"
     },
     {
       "file": "fixed-wing-c2-current-ui-v4-4k.mp4",
@@ -55,8 +61,9 @@
         3840,
         2160
       ],
-      "sha256": "cc5cfc055739838e2db07d7c48c64b104dcdb4d960e51282746da6e791cdad23"
+      "sha256": "9fa9471fdcde0d264709620b6a2b246f1ed047a78a031e811148c68c88a82675"
     }
   ],
-  "4k_encoding": "Upscaled from the native 1080p recording"
+  "4k_encoding": "Upscaled from the native 1080p recording",
+  "website_captions": "Optional checking is explained during the anchor comparison; the closing flight caption describes automatic navigation continuing."
 }

@@ -14,33 +14,88 @@
   const copy = film.querySelector('[data-replay-copy]');
   const step = film.querySelector('[data-replay-step]');
   const progress = film.querySelector('[data-replay-progress]');
+  const introDuration = 1.68;
   const scenes = [
-    [0, 'Recorded replay', 'Automatic visual navigation.', 'Trajectory and onboard imagery.'],
-    [5.2, 'Optional review', 'Check one visual anchor.', 'Navigation runs automatically.'],
-    [9.2, 'Visual anchors', 'The flight continues.', 'Checking an anchor is optional.'],
+    [0, 'KUBECA / Fixed-wing demonstration', 'Visual navigation.', 'Automatic navigation. Optional review.'],
+    [1.68, 'Recorded replay', 'Automatic visual navigation.', 'Trajectory and onboard imagery.'],
+    [7.4, 'Visual anchor check', 'Checking is optional.', 'Review the visual anchor when needed.'],
+    [12.76, 'Recorded replay', 'The flight continues.', 'Automatic navigation continues.'],
   ];
   let currentScene = -1;
   let animation = null;
+  let outgoingAnimation = null;
+  let outgoingCaption = null;
   let frame = 0;
+
+  function clearFades() {
+    animation?.cancel();
+    outgoingAnimation?.cancel();
+    outgoingCaption?.remove();
+    outgoingCaption = null;
+  }
+
+  function snapshotCaption() {
+    const ghost = caption.cloneNode(true);
+    const bounds = caption.getBoundingClientRect();
+    const parent = stage.getBoundingClientRect();
+    const originals = [caption, ...caption.querySelectorAll('*')];
+    const copies = [ghost, ...ghost.querySelectorAll('*')];
+    originals.forEach((original, index) => {
+      const styles = getComputedStyle(original);
+      const node = copies[index];
+      // Freeze the outgoing layout before the intro or review classes change.
+      for (const property of ['font', 'line-height', 'letter-spacing', 'color', 'margin',
+        'padding', 'border', 'border-left', 'background', 'backdrop-filter', 'box-shadow', 'display', 'width', 'height']) {
+        node.style.setProperty(property, styles.getPropertyValue(property));
+      }
+      [...node.attributes].forEach(attribute => {
+        if (attribute.name.startsWith('data-replay-')) node.removeAttribute(attribute.name);
+      });
+    });
+    Object.assign(ghost.style, {
+      position: 'absolute', left: `${bounds.left - parent.left - stage.clientLeft}px`,
+      top: `${bounds.top - parent.top - stage.clientTop}px`, right: 'auto', bottom: 'auto',
+      width: `${bounds.width}px`, height: `${bounds.height}px`, margin: '0', opacity: '1',
+      pointerEvents: 'none',
+    });
+    ghost.classList.add('replay-caption-fade');
+    ghost.setAttribute('aria-hidden', 'true');
+    ghost.inert = true;
+    stage.append(ghost);
+    return ghost;
+  }
 
   function render() {
     const time = video.currentTime;
     let nextScene = 0;
     scenes.forEach((scene, index) => { if (time >= scene[0]) nextScene = index; });
     if (nextScene !== currentScene) {
+      clearFades();
+      const blend = !motion.matches && !video.paused && currentScene >= 0;
+      const ghost = blend ? snapshotCaption() : null;
       currentScene = nextScene;
       const [, label, heading, description] = scenes[nextScene];
       step.textContent = label;
       title.textContent = heading;
       copy.textContent = description;
-      animation?.cancel();
-      if (!motion.matches && !video.paused) animation = caption.animate(
-        [{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'translateY(0)' }],
-        { duration: 600, easing: 'cubic-bezier(.22,1,.36,1)' }
-      );
+      if (ghost) {
+        outgoingCaption = ghost;
+        const timing = { duration: 900, easing: 'cubic-bezier(.4,0,.2,1)' };
+        animation = caption.animate([{ opacity: 0 }, { opacity: 1 }], timing);
+        outgoingAnimation = ghost.animate([{ opacity: 1 }, { opacity: 0 }], timing);
+        outgoingAnimation.finished.then(() => {
+          ghost.remove();
+          if (outgoingCaption === ghost) outgoingCaption = null;
+        }, () => ghost.remove());
+      }
     }
-    film.classList.toggle('has-comparison', time >= 5.2 && time < 9.2);
-    progress.style.width = `${100 * Math.min(1, time / (video.duration || 18))}%`;
+    const isIntro = time < introDuration;
+    if (film.classList.contains('has-intro') !== isIntro) {
+      film.classList.toggle('has-intro', isIntro);
+      sizePicture();
+    }
+    film.classList.toggle('has-comparison', time >= 7.4 && time < 12.76);
+    progress.style.width = `${100 * Math.min(1, time / (video.duration || 23.12))}%`;
   }
 
   function sizePicture() {
@@ -71,7 +126,7 @@
   }
 
   function update() {
-    const cover = video.paused && video.currentTime < .1;
+    const cover = video.paused && video.currentTime < introDuration;
     film.classList.toggle('has-cover', cover);
     toggle.hidden = !cover;
     video.controls = !cover;
@@ -89,24 +144,32 @@
     request.catch(() => {});
   });
   document.addEventListener('fullscreenchange', () => {
+    clearFades();
     update();
     sizePicture();
   });
-  window.addEventListener('resize', sizePicture);
+  window.addEventListener('resize', () => { clearFades(); sizePicture(); });
   video.addEventListener('loadedmetadata', sizePicture);
   video.addEventListener('play', () => {
     update();
     if (!frame) frame = window.requestAnimationFrame(tick);
   });
-  video.addEventListener('pause', () => { update(); window.cancelAnimationFrame(frame); frame = 0; render(); });
+  video.addEventListener('pause', () => { clearFades(); update(); window.cancelAnimationFrame(frame); frame = 0; render(); });
   ['timeupdate', 'seeked', 'loadedmetadata'].forEach(event => video.addEventListener(event, () => { update(); render(); }));
-  video.addEventListener('ended', update);
+  video.addEventListener('ended', () => {
+    clearFades();
+    video.pause();
+    video.currentTime = 0;
+    update();
+    render();
+    sizePicture();
+  });
   video.addEventListener('error', () => {
     toggle.hidden = true;
     film.querySelector('[data-replay-error]').hidden = false;
   });
   motion.addEventListener('change', () => {
-    if (motion.matches) { video.pause(); animation?.cancel(); }
+    if (motion.matches) { video.pause(); clearFades(); }
   });
   document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); });
 

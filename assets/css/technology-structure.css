@@ -53,7 +53,7 @@
   font-weight: 400;
   line-height: 1.2;
 }
-.cinematic-tech :is(.system-platforms article > p:last-child, .c2-showcase-workflow p) {
+.cinematic-tech :is(.system-platforms article > p:last-child, .system-platforms details > p, .c2-showcase-workflow p) {
   max-width: 42ch;
   font-size: 18px;
   line-height: 1.6;
@@ -83,4 +83,21 @@
   }
   .cinematic-tech .tech-hero .lead { font-size: 19px; }
   .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) { margin-top: 32px; }
+}
+
+/* Keep capability headings visible while phone users expand descriptions. */
+.cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary { list-style: none; cursor: default; }
+.cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary::-webkit-details-marker { display: none; }
+.cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary h3 { margin: 0 0 12px; }
+.cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary :is(.system-label, .c2-showcase-step) { display: block; margin: 0 0 16px; font-size: 11px; font-weight: 400; line-height: 1.6; }
+@media (max-width: 600px) {
+  .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary { position: relative; padding-right: 28px; cursor: pointer; }
+  .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary h3 { margin-bottom: 0; }
+  .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary :is(.system-label, .c2-showcase-step) { margin-bottom: 10px; }
+  .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary::after { content: ""; position: absolute; right: 3px; top: 50%; width: 8px; height: 8px; border-right: 1.5px solid var(--site-accent); border-bottom: 1.5px solid var(--site-accent); transform: translateY(-50%) rotate(45deg); transition: transform .2s ease; }
+  .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) details[open] summary::after { transform: translateY(-50%) rotate(225deg); }
+  .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) details[open] p { margin-top: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary::after { transition: none; }
 }

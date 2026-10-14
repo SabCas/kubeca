@@ -6,12 +6,18 @@
 }
 .c2-showcase-heading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: end; }
 .c2-showcase-lead { max-width: 35ch; color: var(--site-muted); font-size: var(--lead-size); line-height: 1.55; }
-.c2-input-overlay { position: absolute; z-index: 2; left: var(--content-gutter); bottom: 6%; width: min(560px, 43%); padding: 18px; background: #080f13f5; border: 1px solid #47737a; box-shadow: 0 18px 70px #000a; }
-.c2-input-overlay-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; }
-.c2-input-overlay-heading h3 { font-size: clamp(20px, 1.8vw, 26px); font-weight: 400; letter-spacing: -.025em; }
+.c2-input-overlay { position: absolute; z-index: 2; left: 5%; bottom: 6%; width: min(560px, 43%); padding: clamp(5px, 1.2cqw, 18px); background: #080f13f5; border: 1px solid #47737a; box-shadow: 0 18px 70px #000a; }
+.c2-input-overlay-heading { display: flex; justify-content: space-between; align-items: center; gap: clamp(4px, 1cqw, 16px); margin-bottom: clamp(4px, 1.1cqw, 16px); }
+.c2-input-overlay-heading h3 { font-size: clamp(14px, 2.5cqw, 26px); font-weight: 400; letter-spacing: -.025em; }
 .c2-input-overlay-heading span { font-size: 10px; color: var(--site-accent); letter-spacing: .1em; text-transform: uppercase; }
-.c2-input-image { display: block; border: 1px solid var(--site-divider); background: #0b1110; }
+.c2-input-image { position: relative; display: block; container-type: inline-size; border: 1px solid var(--site-divider); background: #0b1110; }
 .c2-input-image img { display: block; width: 100%; height: auto; }
+.c2-command-field { position: absolute; left: 3.35%; top: 30.8%; width: 93.3%; height: 46.6%; overflow: hidden; padding: 1.7cqw 1.2cqw; background: #0a120f; color: #e8efec; font: 2cqw/1.4 "DejaVu Sans", Arial, sans-serif; letter-spacing: 0; white-space: pre-wrap; pointer-events: none; }
+.c2-input-image[data-typing-state="typing"] .c2-command-field::after { content: ""; display: inline-block; width: 1px; height: 1em; margin-left: 1px; background: #31d7e5; vertical-align: text-bottom; animation: c2-command-caret 1s step-end infinite; }
+@keyframes c2-command-caret { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .c2-input-image .c2-command-field::after { animation: none; }
+}
 .c2-showcase-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin: clamp(40px, 5vw, 72px) 0 0; padding: 0; list-style: none; }
 .c2-showcase-workflow li { padding-top: 22px; border-top: 1px solid var(--site-divider); }
 .c2-showcase-step { display: block; color: var(--site-accent); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
@@ -23,7 +29,7 @@
 
 /* Generated hardware is decorative. The actual UI is a separate, undistorted
    screenshot placed inside the measured screen opening of the 1536×1024 asset. */
-.c2-showcase-visual { position: relative; margin-inline: calc(-1 * var(--content-gutter)); }
+.c2-showcase-visual { position: relative; container-type: inline-size; margin-inline: calc(-1 * var(--content-gutter)); }
 .c2-showcase-terminal { position: relative; aspect-ratio: 3 / 2; }
 .c2-showcase-terminal-art { display: block; width: 100%; height: auto; }
 .c2-showcase-screen { position: absolute; inset: 0; display: block; }
@@ -31,12 +37,11 @@
 @media (max-width: 900px) {
   .c2-showcase-heading { grid-template-columns: 1fr; }
   .c2-showcase-lead { max-width: 48ch; }
-  .c2-input-overlay { position: relative; left: auto; bottom: auto; width: auto; margin: -48px var(--content-gutter) 24px; }
 }
 @media (max-width: 600px) {
   .c2-showcase-lead { font-size: 19px; }
   .c2-showcase-workflow { grid-template-columns: 1fr; gap: 28px; }
-  .c2-input-overlay { margin-top: 0; padding: 14px; }
+  .c2-input-overlay-heading span { display: none; }
 }
 
 .cinematic-tech #c2 { background: var(--site-background); }
