@@ -12,7 +12,6 @@
 .c2-input-overlay-heading span { font-size: 10px; color: var(--site-accent); letter-spacing: .1em; text-transform: uppercase; }
 .c2-input-image { display: block; border: 1px solid var(--site-divider); background: #0b1110; }
 .c2-input-image img { display: block; width: 100%; height: auto; }
-.c2-input-overlay > p { margin-top: 14px; color: var(--site-muted); font-size: 12px; line-height: 1.6; }
 .c2-showcase-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin: clamp(40px, 5vw, 72px) 0 0; padding: 0; list-style: none; }
 .c2-showcase-workflow li { padding-top: 22px; border-top: 1px solid var(--site-divider); }
 .c2-showcase-step { display: block; color: var(--site-accent); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }

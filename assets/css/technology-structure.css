@@ -17,20 +17,70 @@
 .software-demonstration .fixed-wing-replay-details summary { cursor: pointer; font-size: 13px; }
 .software-demonstration .fixed-wing-replay-details p { margin-top: 12px; font-size: 13px; }
 /* Product names have one shared scale across hardware and software. */
-.cinematic-tech :is(#c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
+.cinematic-tech :is(#system-title, #c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
   font-size: clamp(36px, 3.5vw, 58px);
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -.04em;
 }
+/* A consistent reading rhythm, scoped to Technology rather than the homepage. */
+.cinematic-tech { --section-space: clamp(56px, 6vw, 88px); }
+.cinematic-tech main > .section:is(#system, #quadcopter, #contact) {
+  padding-block: var(--section-space);
+}
+.cinematic-tech #quadcopter { min-height: 0; row-gap: 32px; }
+.cinematic-tech :is(.system-intro, .c2-showcase-heading, .office-overview, .fixed-wing-replay-heading) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px clamp(32px, 5vw, 72px);
+}
+.cinematic-tech :is(.system-intro, .c2-showcase-heading, .office-overview, .fixed-wing-replay-heading) .eyebrow {
+  margin-bottom: 18px;
+}
+.cinematic-tech :is(.system-intro > .lead, .c2-showcase-lead, .office-overview > .lead, .fixed-wing-replay-heading > p, #fixed-wing .airframe-details > .lead, #navigation-module .navigation-module-description) {
+  max-width: 42ch;
+  font-size: clamp(19px, 1.5vw, 22px);
+  line-height: 1.55;
+  letter-spacing: normal;
+  color: var(--site-muted);
+}
+.cinematic-tech :is(.system-platforms, .c2-showcase-workflow) {
+  gap: 28px clamp(24px, 3vw, 48px);
+  margin-top: 40px;
+}
+.cinematic-tech :is(.system-platforms, .c2-showcase-workflow) h3 {
+  margin: 16px 0 12px;
+  font-size: clamp(22px, 2vw, 28px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.cinematic-tech :is(.system-platforms article > p:last-child, .c2-showcase-workflow p) {
+  max-width: 42ch;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--site-muted);
+}
+.cinematic-tech .mission-film { margin-top: 40px; }
+.cinematic-tech .c2-showcase-previews { margin-top: 28px; }
+.cinematic-tech .c2-input-overlay-heading span { font-size: 12px; }
+.cinematic-tech .fixed-wing-replay-heading { margin-bottom: 32px; }
+.cinematic-tech .fixed-wing-replay-details :is(summary, p) {
+  font-size: 14px;
+  line-height: 1.65;
+}
 @media (max-width: 900px) {
-  .cinematic-tech :is(#c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
+  .cinematic-tech :is(#system-title, #c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
     font-size: clamp(36px, 6vw, 52px);
+  }
+  .cinematic-tech :is(.system-intro, .c2-showcase-heading, .office-overview, .fixed-wing-replay-heading) {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 24px;
   }
 }
 @media (max-width: 600px) {
   .software-demonstration { scroll-margin-top: 105px; }
-  .cinematic-tech :is(#c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
+  .cinematic-tech :is(#system-title, #c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
     font-size: clamp(32px, 8.6vw, 44px);
   }
+  .cinematic-tech .tech-hero .lead { font-size: 19px; }
+  .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) { margin-top: 32px; }
 }
