@@ -21,9 +21,7 @@
         original.hidden = !isInterface;
         original.href = link.href;
       }
-      const label = link.closest('figure').querySelector('figcaption');
-      caption.textContent = link.dataset.galleryCaption
-        || `${label.firstChild.textContent.trim()} · ${label.querySelector('small').textContent}`;
+      caption.textContent = link.dataset.galleryCaption || link.querySelector('img').alt;
       dialog.showModal();
       document.documentElement.classList.add('c2-gallery-open');
     });

@@ -56,11 +56,6 @@ html.c2-gallery-open { overflow: hidden; }
 .c2-showcase-previews { margin-top: clamp(32px, 4vw, 56px); }
 .c2-showcase-preview-label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid var(--site-divider); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
 .c2-showcase :focus-visible { outline: 2px solid var(--site-accent); outline-offset: 5px; }
-.c2-showcase-preview-description { margin: 20px 0 26px; max-width: 100ch; font-size: 15px; line-height: 1.7; color: var(--site-muted); }
-.c2-showcase-interface figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 20px; margin-top: 16px; font-size: 12px; color: var(--site-text); }
-.c2-showcase-interface figcaption small { font-size: 12px; color: var(--site-muted); }
-.c2-showcase-media-note { margin: 14px 0 24px; font-size: 12px; line-height: 1.7; color: var(--site-muted); }
-.c2-showcase-media-note a { color: var(--site-accent); text-decoration: underline; text-underline-offset: 3px; }
 
 /* Generated hardware is decorative. The actual UI is a separate, undistorted
    screenshot placed inside the measured screen opening of the 1536×1024 asset. */
