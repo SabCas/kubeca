@@ -1,0 +1,54 @@
+/* Clear chapters for the physical platforms and their shared mission software. */
+.technology-chapter {
+  padding: var(--section-space) var(--content-gutter) 48px;
+  border-top: 1px solid var(--site-divider);
+  background: var(--site-background);
+  color: var(--site-text);
+}
+.technology-chapter-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: clamp(32px, 5vw, 72px);
+}
+.cinematic-tech .technology-chapter h2 {
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
+.technology-chapter-heading > p {
+  max-width: 44ch;
+  color: var(--site-muted);
+  font-size: var(--lead-size);
+  line-height: 1.55;
+}
+.technology-product-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+  margin-top: 36px;
+}
+.technology-product-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 44px;
+  border-bottom: 1px solid var(--site-divider);
+  color: var(--site-accent);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.technology-product-links a:hover {
+  color: var(--site-text);
+  border-bottom-color: var(--site-accent);
+}
+.cinematic-tech #c2 { border-top: 1px solid var(--site-divider); }
+@media (max-width: 900px) {
+  .technology-chapter-heading { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .technology-chapter { padding-bottom: 32px; }
+  .technology-chapter-heading > p { font-size: 19px; }
+  .technology-product-links { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
