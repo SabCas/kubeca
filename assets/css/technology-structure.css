@@ -1,4 +1,6 @@
-/* Clear chapters for the physical platforms and their shared mission software. */
+/* Present the shared mission software before the aircraft and onboard systems. */
+.technology-hero-actions { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 36px; }
+.technology-hero-actions .text-link { margin-top: 32px; padding-bottom: 18px; }
 .technology-chapter {
   padding: var(--section-space) var(--content-gutter) 48px;
   border-top: 1px solid var(--site-divider);
