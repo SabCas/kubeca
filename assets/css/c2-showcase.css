@@ -1,37 +1,3 @@
-.c2-gallery-dialog {
-  width: min(1120px,calc(100vw - 48px));
-  max-width: none;
-  max-height: 90svh;
-  padding: 0;
-  border: 1px solid #29d8e788;
-  background: #080e12;
-  color: #edf3f5;
-  box-shadow: 0 24px 100px #0009;
-  font-family: inherit;
-}
-.c2-gallery-dialog::backdrop { background: #02060ce6; }
-.c2-gallery-dialog-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 20px; }
-.c2-gallery-dialog-bar p { font-size: 14px; }
-.c2-gallery-dialog img { width: 100%; height: auto; max-height: 74svh; object-fit: contain; background: #05080d; }
-.c2-gallery-close {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-  min-height: 44px;
-  padding: 0 0 12px;
-  border: 0;
-  border-bottom: 1px solid #29d8e766;
-  background: transparent;
-  color: #79e5ed;
-  font: inherit;
-  font-size: 13px;
-  cursor: pointer;
-}
-.c2-gallery-close span { font-size: 21px; line-height: 1; }
-.c2-gallery-close:hover { border-color: #79e5ed; color: #eefeff; }
-.c2-gallery-close:focus-visible { outline: 2px solid #79e5ed; outline-offset: 4px; }
-html.c2-gallery-open { overflow: hidden; }
 /* Mission software: the same typography and accents as the technology page. */
 .c2-showcase {
   padding: var(--section-space) var(--content-gutter);
@@ -45,7 +11,6 @@ html.c2-gallery-open { overflow: hidden; }
 .c2-input-overlay-heading h3 { font-size: clamp(20px, 1.8vw, 26px); font-weight: 400; letter-spacing: -.025em; }
 .c2-input-overlay-heading span { font-size: 10px; color: var(--site-accent); letter-spacing: .1em; text-transform: uppercase; }
 .c2-input-image { display: block; border: 1px solid var(--site-divider); background: #0b1110; }
-.c2-input-image:hover { border-color: var(--site-accent); }
 .c2-input-image img { display: block; width: 100%; height: auto; }
 .c2-input-overlay > p { margin-top: 14px; color: var(--site-muted); font-size: 12px; line-height: 1.6; }
 .c2-showcase-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin: clamp(40px, 5vw, 72px) 0 0; padding: 0; list-style: none; }
@@ -64,12 +29,6 @@ html.c2-gallery-open { overflow: hidden; }
 .c2-showcase-terminal-art { display: block; width: 100%; height: auto; }
 .c2-showcase-screen { position: absolute; inset: 0; display: block; }
 .c2-showcase-screen img { position: absolute; left: 7.55%; top: 7.2%; width: 84.9%; height: 71.6%; object-fit: contain; background: #080808; }
-.c2-showcase-enlarge { position: absolute; right: 9%; bottom: 23%; padding: 10px 14px; border: 1px solid #46636a; background: #080d11ed; color: var(--site-accent); font-size: 12px; }
-.c2-showcase-screen:hover .c2-showcase-enlarge { border-color: var(--site-accent); color: #eefeff; }
-.c2-gallery-original { flex-shrink: 0; color: #79e5ed; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
-.c2-gallery-original[hidden] { display: none; }
-.c2-gallery-dialog-interface { width: min(1760px, calc(100vw - 48px)); }
-.c2-gallery-dialog-interface img { max-height: none; }
 @media (max-width: 900px) {
   .c2-showcase-heading { grid-template-columns: 1fr; }
   .c2-showcase-lead { max-width: 48ch; }
@@ -78,13 +37,7 @@ html.c2-gallery-open { overflow: hidden; }
 @media (max-width: 600px) {
   .c2-showcase-lead { font-size: 19px; }
   .c2-showcase-workflow { grid-template-columns: 1fr; gap: 28px; }
-  .c2-showcase-terminal { margin-bottom: 54px; }
   .c2-input-overlay { margin-top: 0; padding: 14px; }
-  .c2-showcase-enlarge { top: 100%; bottom: auto; left: var(--content-gutter); right: var(--content-gutter); min-height: 44px; padding: 12px; }
-  .c2-gallery-dialog-interface { width: calc(100vw - 24px); }
-  .c2-gallery-dialog-interface .c2-gallery-dialog-bar { flex-wrap: wrap; }
-  .c2-gallery-dialog-interface .c2-gallery-dialog-bar p { flex-basis: 100%; }
-  .c2-gallery-dialog-interface .c2-gallery-close { margin-left: auto; }
 }
 
 .cinematic-tech #c2 { background: var(--site-background); }
