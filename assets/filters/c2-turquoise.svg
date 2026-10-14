@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- A restrained turquoise scale for website previews, with pale text highlights. -->
+  <filter id="c2-turquoise" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="
+      .2126 .7152 .0722 0 0
+      .2126 .7152 .0722 0 0
+      .2126 .7152 .0722 0 0
+      0 0 0 1 0"/>
+    <feComponentTransfer>
+      <feFuncR type="table" tableValues=".0196 .17 .40 .9098"/>
+      <feFuncG type="table" tableValues=".0431 .34 .64 .9608"/>
+      <feFuncB type="table" tableValues=".0588 .38 .67 .9647"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
