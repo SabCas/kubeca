@@ -173,6 +173,12 @@ a { color: inherit; }
   will-change:transform !important;
 }
 
+.home-who-media{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+}
+
 .home-who-scene:nth-child(1) .home-who-image{object-position:62% 48% !important;}
 .home-who-scene:nth-child(2) .home-who-image{object-position:82% 50% !important;}
 .home-who-scene:nth-child(3) .home-who-image{object-position:66% 48% !important;}
@@ -243,7 +249,8 @@ body { background: #05080d; }
   .home-who-story .home-who-scene { width: 100% !important; min-height: 0 !important; height: auto !important; }
   .home-who-story .home-who-scene + .home-who-scene { margin-top: 48px !important; }
   .home-who-story .home-who-scene:after { bottom: auto !important; height: 64svh !important; background: linear-gradient(180deg,rgba(5,8,13,0),rgba(5,8,13,.68)) !important; }
-  .home-who-image { position: relative !important; height: 64svh !important; transform: none !important; }
+  .home-who-media { position: relative; height: 64svh; }
+  .home-who-image { height: 100% !important; transform: scale(var(--story-scale,1)) translate3d(var(--story-shift,0),0,0) !important; opacity: var(--story-opacity,1); }
   .home-who-scene:nth-child(2) .home-who-image { object-position: 74% 50% !important; }
   .home-who-text { display: none !important; }
   .mobile-story-copy { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip-path: none; padding: 44px 24px 62px; background: #05080d; }
@@ -253,7 +260,7 @@ body { background: #05080d; }
 }
 @media (prefers-reduced-motion: reduce) {
   .home-who-text.is-changing { opacity: 1 !important; transform: none !important; }
-  .home-who-image { will-change: auto !important; }
+  .home-who-image { transform: none !important; opacity: 1 !important; will-change: auto !important; }
 }
 
 /* Keep the site navigation and contact area while matching the recovered intro. */
