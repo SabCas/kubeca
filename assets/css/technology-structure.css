@@ -1,30 +1,6 @@
 /* Hardware products precede the software chapter: C2, then platform demonstrations. */
 .technology-hero-actions { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 36px; }
 .technology-hero-actions .text-link { margin-top: 32px; padding-bottom: 18px; }
-.technology-chapter {
-  padding: var(--section-space) var(--content-gutter) 48px;
-  border-top: 1px solid var(--site-divider);
-  background: var(--site-background);
-  color: var(--site-text);
-}
-.technology-chapter-heading {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: end;
-  gap: clamp(32px, 5vw, 72px);
-}
-.cinematic-tech .technology-chapter h2 {
-  font-size: clamp(36px, 4vw, 58px);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -.04em;
-}
-.technology-chapter-heading > p {
-  max-width: 44ch;
-  color: var(--site-muted);
-  font-size: var(--lead-size);
-  line-height: 1.55;
-}
 .cinematic-tech #c2 { border-top: 1px solid var(--site-divider); }
 .software-demonstration {
   padding: var(--section-space) var(--content-gutter);
@@ -34,22 +10,27 @@
   border-top: 1px solid var(--site-divider);
 }
 .software-demonstration > .fixed-wing-replay { border-top: 0; padding-top: 0; }
-.software-demonstration .fixed-wing-replay-heading h2 {
-  font-size: clamp(30px, 3.4vw, 50px);
-  line-height: 1.08;
-  letter-spacing: -.04em;
-}
 .software-demonstration .fixed-wing-replay-details {
   padding-top: 18px;
   border-top: 1px solid var(--site-divider);
 }
 .software-demonstration .fixed-wing-replay-details summary { cursor: pointer; font-size: 13px; }
 .software-demonstration .fixed-wing-replay-details p { margin-top: 12px; font-size: 13px; }
+/* Product names have one shared scale across hardware and software. */
+.cinematic-tech :is(#c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
+  font-size: clamp(36px, 3.5vw, 58px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.04em;
+}
 @media (max-width: 900px) {
-  .technology-chapter-heading { grid-template-columns: 1fr; }
+  .cinematic-tech :is(#c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
+    font-size: clamp(36px, 6vw, 52px);
+  }
 }
 @media (max-width: 600px) {
   .software-demonstration { scroll-margin-top: 105px; }
-  .technology-chapter { padding-bottom: 32px; }
-  .technology-chapter-heading > p { font-size: 19px; }
+  .cinematic-tech :is(#c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
+    font-size: clamp(32px, 8.6vw, 44px);
+  }
 }

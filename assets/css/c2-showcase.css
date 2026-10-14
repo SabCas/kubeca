@@ -60,13 +60,13 @@ html.c2-gallery-open { overflow: hidden; }
   color: var(--site-text);
 }
 .c2-showcase-heading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: end; }
-.c2-showcase-heading h2 { font-size: var(--section-title-size); line-height: 1.05; font-weight: 400; letter-spacing: -.045em; }
 .c2-showcase-lead { max-width: 35ch; color: var(--site-muted); font-size: var(--lead-size); line-height: 1.55; }
 .c2-showcase-workflow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); margin: clamp(40px, 5vw, 72px) 0 40px; padding: 0; list-style: none; }
 .c2-showcase-workflow li { padding-top: 22px; border-top: 1px solid var(--site-divider); }
 .c2-showcase-step { display: block; color: var(--site-accent); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
 .c2-showcase-workflow h3 { margin: 18px 0 12px; font-size: clamp(20px, 1.8vw, 26px); font-weight: 400; letter-spacing: -.025em; }
 .c2-showcase-workflow p { font-size: 15px; line-height: 1.7; color: var(--site-muted); }
+.c2-showcase-previews { margin-top: clamp(32px, 4vw, 56px); }
 .c2-showcase-preview-label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding: 20px 0; border-top: 1px solid var(--site-divider); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
 .c2-showcase-preview-label small { font-size: 11px; color: var(--site-muted); letter-spacing: normal; text-transform: none; }
 .c2-showcase :focus-visible { outline: 2px solid var(--site-accent); outline-offset: 5px; }
@@ -97,7 +97,6 @@ html.c2-gallery-open { overflow: hidden; }
   .c2-showcase-lead { max-width: 48ch; }
 }
 @media (max-width: 600px) {
-  .c2-showcase-heading h2 { font-size: clamp(36px, 10vw, 52px); }
   .c2-showcase-lead { font-size: 19px; }
   .c2-showcase-workflow { grid-template-columns: 1fr; gap: 28px; }
   .c2-showcase-terminal { margin-bottom: 54px; }

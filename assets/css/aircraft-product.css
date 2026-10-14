@@ -8,6 +8,8 @@
 .airframe-feature {
   position: relative;
   background: #080d11;
+  border-top: 1px solid var(--site-divider);
+  scroll-margin-top: 48px;
 }
 .airframe-heading {
   position: absolute;
@@ -94,6 +96,7 @@
   }
 }
 @media (max-width: 760px) {
+  .airframe-feature { scroll-margin-top: 0; }
   .airframe-heading {
     position: relative;
     inset: auto;
