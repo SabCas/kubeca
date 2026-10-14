@@ -20,5 +20,21 @@
     "selection": "All five aircraft visible. Selected quad violet; other aircraft cyan.",
     "interior": "AI-generated image; not drone footage.",
     "quad_viewpoint": "Short illustrative direction cone; not a verified visible ground footprint."
+  },
+  "c2-input-speech-20261014.webp": {
+    "captured": "2026-10-14",
+    "source": "Current KUBECA C2 mission composer, captured by build/homepage-review/capture_c2_input.py in c2-fleet.",
+    "data": "Illustrative instruction in the local read-only WorkspaceExample fixture. No aircraft commands or plan requests sent.",
+    "instruction": "Explore for 300 seconds; return home.",
+    "speech": "Listening UI exercised with a simulated SpeechRecognition result; no audio recorded or microphone used.",
+    "presentation": "Static crop of the real input controls, displayed above the mission fleet image."
+  },
+  "c2-input-text-20261014.webp": {
+    "captured": "2026-10-14",
+    "source": "Current KUBECA C2 mission composer, captured by build/homepage-review/capture_c2_input.py in c2-fleet.",
+    "data": "Illustrative instruction in the local read-only WorkspaceExample fixture. No aircraft commands or plan requests sent.",
+    "instruction": "Explore for 300 seconds; return home.",
+    "speech": "Text entered in the actual C2 task field.",
+    "presentation": "Static crop of the real input controls, displayed above the mission fleet image."
   }
 }

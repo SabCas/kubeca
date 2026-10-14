@@ -8,14 +8,14 @@
   const caption = dialog.querySelector('#c2-gallery-caption');
   const original = dialog.querySelector('.c2-gallery-original');
 
-  document.querySelectorAll('.c2-showcase-screen[data-gallery-image]').forEach((link) => {
+  document.querySelectorAll('.c2-showcase [data-gallery-image]').forEach((link) => {
     link.addEventListener('click', (event) => {
       // Keep ordinary image links available for new tabs and browsers without dialogs.
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       preview.src = link.href;
       preview.alt = link.querySelector('img').alt;
-      const isInterface = link.classList.contains('c2-showcase-screen');
+      const isInterface = link.matches('.c2-showcase-screen, .c2-input-image');
       dialog.classList.toggle('c2-gallery-dialog-interface', isInterface);
       if (original) {
         original.hidden = !isInterface;
