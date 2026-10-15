@@ -78,6 +78,17 @@
 }
 @media (max-width: 600px) {
   .software-demonstration { scroll-margin-top: 105px; }
+  .cinematic-tech .airframe-feature { display: flex; flex-direction: column; }
+  .cinematic-tech .airframe-feature > [data-media-slot="fixed-wing-platform"] { order: 1; }
+  .cinematic-tech .airframe-heading { order: 2; margin-top: -40px; padding: 0 var(--gutter) 18px; }
+  .cinematic-tech .airframe-details { order: 3; }
+  .cinematic-tech #navigation-module .navigation-module-copy { margin-top: -40px; }
+  .cinematic-tech :is(#fixed-wing-replay, #office-replay) .replay-stage:not(:fullscreen) {
+    width: calc(100% + 2 * var(--content-gutter));
+    margin-inline: calc(-1 * var(--content-gutter));
+    border-inline: 0;
+    border-radius: 0;
+  }
   .cinematic-tech :is(#system-title, #c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
     font-size: clamp(32px, 8.6vw, 44px);
   }
