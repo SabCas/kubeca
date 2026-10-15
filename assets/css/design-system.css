@@ -101,6 +101,26 @@
     font-size: clamp(36px, 6vw, 52px);
   }
 }
+/* Keep the main destinations readable and easy to tap on phones and tablets. */
+@media (max-width: 760px) {
+  :is(.cinematic-home, .cinematic-tech) .site-nav { gap: 8px; }
+  :is(.cinematic-home, .cinematic-tech) .site-nav nav { gap: clamp(3px, calc(10vw - 29px), 14px); font-size: 14px; }
+  :is(.cinematic-home, .cinematic-tech) .site-nav nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px 0;
+    line-height: 1.2;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  :is(.cinematic-home, .cinematic-tech) .site-nav .wordmark { min-width: 44px; min-height: 44px; }
+}
+@media (max-width: 420px) {
+  :is(.cinematic-home, .cinematic-tech) .site-nav .brand-name { display: none; }
+}
 @media (max-width: 600px) {
   .cinematic-tech :is(#airframe-title, #navigation-module-title) {
     font-size: clamp(32px, 8.6vw, 44px);

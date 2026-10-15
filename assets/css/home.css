@@ -221,8 +221,8 @@ a { color: inherit; }
   max-width:680px !important;
   margin:0 0 30px !important;
   color:#fff !important;
-  font-size:clamp(2.75rem,4.7vw,5.7rem) !important;
-  line-height:.98 !important;
+  font-size:clamp(28px,3.8vw,76px) !important;
+  line-height:1.05 !important;
   font-weight:320 !important;
   letter-spacing:-.045em !important;
   text-transform:none !important;
