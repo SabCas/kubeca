@@ -16,6 +16,10 @@
 }
 .software-demonstration .fixed-wing-replay-details summary { cursor: pointer; font-size: 13px; }
 .software-demonstration .fixed-wing-replay-details p { margin-top: 12px; font-size: 13px; }
+.fixed-wing-evaluation { margin-top: 18px; color: var(--site-muted); font-size: 14px; line-height: 1.65; }
+.fixed-wing-evaluation strong { color: var(--site-text); font-weight: 500; }
+.fixed-wing-evaluation .fixed-wing-map-credit { margin-top: 8px; font-size: 11px; }
+.fixed-wing-evaluation a { color: var(--site-muted); text-decoration: underline; text-underline-offset: 3px; }
 /* Product names have one shared scale across hardware and software. */
 .cinematic-tech :is(#system-title, #c2-showcase-title, #fixed-wing-replay-title, #quadcopter-title) {
   font-size: clamp(36px, 3.5vw, 58px);
