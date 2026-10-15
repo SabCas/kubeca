@@ -102,6 +102,7 @@
 .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary h3 { margin: 0 0 12px; }
 .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary :is(.system-label, .c2-showcase-step) { display: block; margin: 0 0 16px; font-size: 11px; font-weight: 400; line-height: 1.6; }
 @media (max-width: 600px) {
+  .cinematic-tech :is(.system-platforms article, .c2-showcase-workflow li) { border-top: 0; }
   .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary { position: relative; padding-right: 28px; cursor: pointer; }
   .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary h3 { margin-bottom: 0; }
   .cinematic-tech :is(.system-platforms, .c2-showcase-workflow) summary :is(.system-label, .c2-showcase-step) { margin-bottom: 10px; }
