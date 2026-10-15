@@ -14,6 +14,7 @@
   const copy = film.querySelector('[data-replay-copy]');
   const step = film.querySelector('[data-replay-step]');
   const progress = film.querySelector('[data-replay-progress]');
+  const captionText = window.KubecaReplayCaptions?.create(film);
   const introDuration = 1.68;
   const scenes = [
     [0, 'KUBECA / Fixed-wing demonstration', 'Visual navigation.', 'Automatic navigation. Optional review.'],
@@ -69,7 +70,8 @@
     const time = video.currentTime;
     let nextScene = 0;
     scenes.forEach((scene, index) => { if (time >= scene[0]) nextScene = index; });
-    if (nextScene !== currentScene) {
+    const changed = nextScene !== currentScene;
+    if (changed) {
       clearFades();
       const blend = !motion.matches && !video.paused && currentScene >= 0;
       const ghost = blend ? snapshotCaption() : null;
@@ -95,6 +97,7 @@
       sizePicture();
     }
     film.classList.toggle('has-comparison', time >= 7.4 && time < 12.76);
+    if (changed) captionText?.reveal();
     progress.style.width = `${100 * Math.min(1, time / (video.duration || 23.12))}%`;
   }
 

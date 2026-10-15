@@ -9,6 +9,7 @@
   const fullscreen = film.querySelector('[data-replay-fullscreen]');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const caption = film.querySelector('[data-replay-caption]');
+  const captionText = window.KubecaReplayCaptions?.create(film);
   let scenes = [];
   let currentScene = -1;
   let requestedScene = '';
@@ -26,6 +27,7 @@
     film.querySelector('[data-replay-step]').textContent = scene.label;
     film.querySelector('[data-replay-title]').textContent = scene.title;
     film.querySelector('[data-replay-copy]').textContent = scene.copy;
+    captionText?.reveal();
     sizePicture();
   }
   function changeScene(scene, index, layout) {

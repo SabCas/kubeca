@@ -1,0 +1,57 @@
+/* Compact caption cards shared by the two software demonstrations. */
+.cinematic-tech :is(#fixed-wing-replay, #office-replay) .replay-caption {
+  --caption-corner: clamp(12px, 1.5cqw, 22px);
+  --caption-stroke: clamp(2px, .2cqw, 3px);
+  padding: clamp(10px, 1.4cqw, 22px) !important;
+  border: 0 !important;
+  background: rgb(3 8 12 / 88%) !important;
+  backdrop-filter: none;
+  box-shadow: 0 8px 28px #0003;
+}
+.cinematic-tech :is(#fixed-wing-replay, #office-replay) .replay-caption:not(.replay-caption-fade) {
+  width: fit-content !important;
+  max-width: min(65%, 920px);
+}
+.cinematic-tech #fixed-wing-replay:not(.has-intro) .replay-caption:not(.replay-caption-fade) {
+  max-width: min(52%, 720px);
+}
+.cinematic-tech :is(#fixed-wing-replay, #office-replay) .replay-caption::before,
+.cinematic-tech :is(#fixed-wing-replay, #office-replay) .replay-caption::after {
+  content: '';
+  position: absolute;
+  width: var(--caption-corner);
+  height: var(--caption-corner);
+  border: 0 solid var(--site-accent);
+  pointer-events: none;
+}
+.cinematic-tech :is(#fixed-wing-replay, #office-replay) .replay-caption::before {
+  top: 0;
+  left: 0;
+  border-top-width: var(--caption-stroke);
+  border-left-width: var(--caption-stroke);
+}
+.cinematic-tech :is(#fixed-wing-replay, #office-replay) .replay-caption::after {
+  bottom: 0;
+  right: 0;
+  border-bottom-width: var(--caption-stroke);
+  border-right-width: var(--caption-stroke);
+}
+.replay-caption-word { display: inline-block; white-space: nowrap; }
+.replay-caption-letter { opacity: 1; }
+.cinematic-tech #office-replay .replay-caption h3 { font-size: clamp(16px, 3.5cqw, 64px); }
+.cinematic-tech #office-replay .replay-caption p { font-size: clamp(11px, 1.75cqw, 30px); }
+@media (max-width: 900px) {
+  .cinematic-tech :is(#fixed-wing-replay, #office-replay) .replay-caption:not(.replay-caption-fade),
+  .cinematic-tech #fixed-wing-replay:not(.has-intro) .replay-caption:not(.replay-caption-fade) { max-width: 90%; }
+}
+/* Limit cards to the actual video picture when full screen adds letterboxing. */
+.cinematic-tech #fixed-wing-replay .replay-stage:fullscreen .replay-caption:not(.replay-caption-fade) {
+  max-width: calc(var(--fixed-wing-picture-width, 100vw) * .65);
+}
+.cinematic-tech #office-replay .replay-stage:fullscreen .replay-caption:not(.replay-caption-fade) {
+  max-width: calc(var(--office-picture-width, 100vw) * .65);
+}
+@media (max-width: 900px) {
+  .cinematic-tech #fixed-wing-replay .replay-stage:fullscreen .replay-caption:not(.replay-caption-fade) { max-width: calc(var(--fixed-wing-picture-width, 100vw) * .9); }
+  .cinematic-tech #office-replay .replay-stage:fullscreen .replay-caption:not(.replay-caption-fade) { max-width: calc(var(--office-picture-width, 100vw) * .9); }
+}
