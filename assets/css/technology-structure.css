@@ -78,11 +78,20 @@
 }
 @media (max-width: 600px) {
   .software-demonstration { scroll-margin-top: 105px; }
+  .cinematic-tech .mission-film { width: calc(100% + 2 * var(--content-gutter)); margin-inline: calc(-1 * var(--content-gutter)); }
+  .cinematic-tech .mission-stage { border: 0; }
+  .cinematic-tech .mission-landscape { width: 115%; max-width: none; margin-top: 90px; margin-left: -7.5%; }
+  .cinematic-tech .mission-caption { top: 36px; bottom: auto; left: var(--content-gutter); width: calc(100% - 2 * var(--content-gutter)); padding: 12px 0; border: 0; background: linear-gradient(110deg,#0a1218a3,#0a121800); backdrop-filter: none; text-shadow: 0 1px 8px #0009; }
+  .cinematic-tech .mission-caption h3 { font-size: clamp(24px,6.6vw,30px); line-height: 1.12; }
+  .cinematic-tech .mission-toolbar { padding-inline: var(--content-gutter); }
   .cinematic-tech .airframe-feature { display: flex; flex-direction: column; }
   .cinematic-tech .airframe-feature > [data-media-slot="fixed-wing-platform"] { order: 1; }
   .cinematic-tech .airframe-heading { order: 2; margin-top: -40px; padding: 0 var(--gutter) 18px; }
   .cinematic-tech .airframe-details { order: 3; }
   .cinematic-tech #navigation-module .navigation-module-copy { margin-top: -40px; }
+  .cinematic-tech :is(#fixed-wing [data-media-slot="fixed-wing-platform"], #navigation-module .navigation-module-media) { overflow: hidden; }
+  .cinematic-tech :is(#fixed-wing [data-media-slot="fixed-wing-platform"], #navigation-module .navigation-module-media) > img { width: 150%; max-width: none; }
+  .cinematic-tech #navigation-module .navigation-module-media > img { margin-left: -25%; }
   .cinematic-tech :is(#fixed-wing-replay, #office-replay) .replay-stage:not(:fullscreen) {
     width: calc(100% + 2 * var(--content-gutter));
     margin-inline: calc(-1 * var(--content-gutter));

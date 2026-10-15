@@ -42,6 +42,8 @@
   .c2-showcase-lead { font-size: 19px; }
   .c2-showcase-workflow { grid-template-columns: 1fr; gap: 28px; }
   .c2-input-overlay-heading span { display: none; }
+  .c2-showcase-visual { overflow: hidden; }
+  .c2-showcase-terminal { width: 150%; margin-left: -50%; }
 }
 
 .cinematic-tech #c2 { background: var(--site-background); }
