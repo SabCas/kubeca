@@ -9,6 +9,7 @@
   const panel = story.querySelector('.home-who-text');
   const title = document.querySelector('#story-title');
   const copy = document.querySelector('#story-copy');
+  const note = document.querySelector('#story-note');
   const steps = Array.from(story.querySelectorAll('.home-story-progress i'));
   const mobileCopies = Array.from(story.querySelectorAll('.mobile-story-copy'));
   const technologyLink = document.querySelector('#home-technology-link');
@@ -26,6 +27,8 @@
     const update = () => {
       title.textContent = `${String(index + 1).padStart(2, '0')} - ${scenes[index].dataset.title}`;
       copy.textContent = scenes[index].dataset.copy;
+      note.textContent = scenes[index].dataset.note || '';
+      note.hidden = !note.textContent;
       technologyLink.hidden = desktop.matches && index !== scenes.length - 1;
       steps.forEach((step, stepIndex) => step.classList.toggle('is-active', stepIndex === index));
       panel.classList.remove('is-changing');

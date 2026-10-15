@@ -351,9 +351,9 @@ body.cinematic-home { background: #05080d; }
   .home-story-progress i, .home-detail-link { transition: none; }
 }
 
-/* A quiet evaluation note sits directly beneath the hero introduction. */
-.cinematic-home .home-hero .home-proof { margin: 18px 0 0; max-width: 76ch; color: #bcc6cb; font-size: 12px; line-height: 1.6; }
-.home-proof span { display: block; }
+/* Evaluation and simulation notes sit beneath the relevant story copy. */
+.home-who-text .home-story-note,
+.mobile-story-copy .home-story-note { margin-top: 16px !important; color: #bcc6cb !important; font-size: 12px !important; line-height: 1.6 !important; letter-spacing: normal !important; }
 
 /* A compact gallery between the intro and contact area. */
 .home-gallery {
