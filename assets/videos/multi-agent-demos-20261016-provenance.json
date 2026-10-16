@@ -1,0 +1,54 @@
+{
+  "revision": 2,
+  "presentation": "Two separate recorded digital-twin demonstrations. All flight, map, detection and image evidence is recorded. Website captions explain the scenes.",
+  "exploration": {
+    "file": "multi-drone-exploration-20261016.mp4",
+    "source_session": "website-exploration-teaser-20261015",
+    "source_date": "2026-10-15",
+    "flight_interval_sec": [
+      85,
+      99
+    ],
+    "replay_speed": 1,
+    "camera_switch_at_sec": 6.264859476003039,
+    "interaction": "Actual C2 marker click and selected-camera change in read-only replay.",
+    "mission_dispatch_enabled": false,
+    "object_detection_claimed": false
+  },
+  "spatial_understanding": {
+    "file": "spatial-understanding-20261016.mp4",
+    "source_session": "office-team-recording-spatial-team-20261016-19",
+    "source_date": "2026-10-16",
+    "camera_interval_sec": [
+      39.111,
+      42.111
+    ],
+    "answer_recording_sec": 42.111,
+    "inference": "Real text-prompted, image-only object detection on GPU; no task-specific retraining for the recording.",
+    "question": "Is there a briefcase on a table?",
+    "answer": "FOUND",
+    "subject_class": "briefcase",
+    "object_class": "table",
+    "relation": "ON",
+    "on_table_relation_claimed": true,
+    "relation_from_measured_geometry": true,
+    "synthetic_detections": false,
+    "source_clip": "Actual current C2 read-only replay with original camera evidence; no browser errors or HTTP writes."
+  },
+  "cover_artwork": {
+    "method": "Existing recorded C2 map and original digital-twin camera evidence, with CSS tonal treatment.",
+    "generated": false,
+    "assets": [
+      {
+        "file": "assets/images/public/quad-team-c2-intro-v4.webp",
+        "source": "Existing recorded shared C2 map cover",
+        "sha256": "11b27ebd62aa7c0fd8be9008b7cfea74be52611e37d5baa1d35c960c407b08f9"
+      },
+      {
+        "file": "assets/images/public/spatial-understanding-cover-recorded-v1.webp",
+        "source": "Original confirmed ON query camera evidence from recording19 at42.111sec",
+        "sha256": "ec93d54bfcedec1b7a1043912b750622d220373902152fa2700e8315121c7f59"
+      }
+    ]
+  }
+}

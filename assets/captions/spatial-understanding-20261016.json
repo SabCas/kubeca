@@ -1,0 +1,17 @@
+{
+  "duration": 14.5,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 2.65,
+      "title": "Detect objects.",
+      "copy": "Zero-shot object detection."
+    },
+    {
+      "start": 2.8,
+      "end": 7.2,
+      "title": "Ask about relationships.",
+      "copy": "A briefcase on a table."
+    }
+  ]
+}

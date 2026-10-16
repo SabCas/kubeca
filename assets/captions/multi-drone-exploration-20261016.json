@@ -1,0 +1,17 @@
+{
+  "duration": 14,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 4.2,
+      "title": "Multiple drones.",
+      "copy": "One shared mission map."
+    },
+    {
+      "start": 5.2,
+      "end": 10.4,
+      "title": "Switch drones.",
+      "copy": "See through another drone\u2019s camera."
+    }
+  ]
+}
