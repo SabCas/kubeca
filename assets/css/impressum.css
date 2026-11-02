@@ -1,0 +1,77 @@
+/* Legal notice, using the shared KUBECA navigation and design system. */
+.legal-page {
+  --paper: #eef1ed;
+  --ink: #eef1ed;
+  --muted: #bcc6cb;
+  --line: #ffffff26;
+}
+.legal-content {
+  width: 100%;
+  max-width: 1240px;
+  min-height: calc(100svh - 180px);
+  margin-inline: auto;
+  padding: clamp(56px, 7vw, 104px) var(--gutter) clamp(72px, 8vw, 120px);
+}
+.legal-heading {
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+.legal-heading h1 {
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+.legal-intro {
+  margin-top: 24px;
+  color: var(--site-muted);
+  font-size: 16px;
+}
+.legal-page main a {
+  text-decoration: underline;
+  text-decoration-color: #79e5ed77;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+.legal-page main a:hover {
+  color: var(--site-accent);
+  text-decoration-color: currentColor;
+}
+.legal-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 36px clamp(32px, 5vw, 72px);
+}
+.legal-details section {
+  min-width: 0;
+  border-top: 1px solid var(--site-divider);
+  padding-top: 22px;
+}
+.legal-details h2 {
+  margin: 0 0 16px;
+  color: var(--site-text);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -.02em;
+}
+.legal-details p,
+.legal-details address {
+  margin: 0;
+  color: var(--site-muted);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.legal-details p + p {
+  margin-top: 10px;
+}
+.legal-details .legal-number {
+  color: var(--site-text);
+  letter-spacing: .04em;
+}
+@media (max-width: 700px) {
+  .legal-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+}
