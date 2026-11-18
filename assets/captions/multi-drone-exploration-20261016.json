@@ -4,14 +4,14 @@
     {
       "start": 0,
       "end": 4.2,
-      "title": "Multiple drones.",
-      "copy": "One shared mission map."
+      "title": "Two drones.",
+      "copy": "One shared map."
     },
     {
       "start": 5.2,
       "end": 10.4,
-      "title": "Switch drones.",
-      "copy": "See through another drone\u2019s camera."
+      "title": "Switch cameras.",
+      "copy": "C2 shows the selected drone’s view."
     }
   ]
 }

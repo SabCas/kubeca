@@ -1,7 +1,9 @@
 WEBVTT
 
 00:00.000 --> 00:02.650
-Detect objects. Zero-shot object detection.
+Detect objects.
+A briefcase and a table.
 
 00:02.800 --> 00:07.200
-Ask about relationships. A briefcase on a table.
+Ask C2.
+Is there a briefcase on a table?
