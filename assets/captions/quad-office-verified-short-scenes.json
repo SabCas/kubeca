@@ -141,85 +141,85 @@
     {
       "at": 3.0,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/short-edit/intro-black.jpg",
+      "before": "exports/quad-office-fixes/run-04/short-edit/intro-black.jpg",
       "duration": 0.24
     },
     {
       "at": 6.0,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000043.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000043.jpg",
       "duration": 0.24
     },
     {
       "at": 6.128406000000002,
       "reason": "planner window opening",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000047.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000047.jpg",
       "duration": 0.24
     },
     {
       "at": 6.800000000000001,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000049.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000049.jpg",
       "duration": 0.24
     },
     {
       "at": 7.600000000000001,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000067.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000067.jpg",
       "duration": 0.24
     },
     {
       "at": 8.799999999999997,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000111.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000111.jpg",
       "duration": 0.24
     },
     {
       "at": 10.0,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000130.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000130.jpg",
       "duration": 0.24
     },
     {
       "at": 12.0,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000314.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000314.jpg",
       "duration": 0.24
     },
     {
       "at": 18.0,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000460.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000460.jpg",
       "duration": 0.24
     },
     {
       "at": 27.0,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000491.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000491.jpg",
       "duration": 0.24
     },
     {
       "at": 29.56173100000001,
       "reason": "review window opening",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000500.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000500.jpg",
       "duration": 0.24
     },
     {
       "at": 33.0,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000503.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000503.jpg",
       "duration": 0.24
     },
     {
       "at": 41.0,
       "reason": "edit cut",
-      "before": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04/frames/000548.jpg",
+      "before": "exports/quad-office-fixes/run-04/frames/000548.jpg",
       "duration": 0.24
     }
   ],
   "return_completed": true,
   "return_completion_shown": false,
-  "source_run": "/home/sabrina/website/FoundationModel/exports/quad-office-fixes/run-04",
+  "source_run": "exports/quad-office-fixes/run-04",
   "return_command_id": "operator-caf863d7-4e8c-45bc-8eb6-273a8e4ca580",
   "time_compression": "A three-second black title card precedes the footage. Waiting is omitted with chronological cuts. Source timing stays at 1x, with brief dissolves at cuts and window openings.",
   "presentation": "Explanatory text is animated website HTML, separate from the video."
